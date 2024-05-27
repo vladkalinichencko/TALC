@@ -16,7 +16,7 @@ def extract_descriptions(filename):
 
     return descriptions
 
-def get_prompts_by_description_from_file(filename, description):
+def get_prompts_from_description(filename, description):
     prompts = []
     
     with open(filename, 'r') as file:
@@ -28,15 +28,9 @@ def get_prompts_by_description_from_file(filename, description):
             
     return prompts
 
-def tokenize_api_descriptions(api_list, tokenizer):
-    descriptions = []
-    for api in api_list:
-        description = api["API_call"].get("description", "")
-        descriptions.append(description)
-        
-    print("")
-    
+def tokenize_api_descriptions(descriptions, tokenizer):
     tokenized_descriptions = []
+    
     for description in descriptions:
         tokenized_description = tokenizer.encode(description)
         tokenized_descriptions.append(tokenized_description[1:])
@@ -44,12 +38,12 @@ def tokenize_api_descriptions(api_list, tokenizer):
     return tokenized_descriptions
 
 def tokenwise_relationship_classification(model, prompt, relationship_phrase, tokenizer, list_path):
-    api_list = extract_descriptions(list_path)
+    descriptions = extract_descriptions(list_path)
     
     augmented_prompt = prompt + " " + relationship_phrase + " "
-    tokenized_prompt = tokenizer.encode(augmented_prompt)
+    tokenized_prompt = tokenizer.encode(augmented_prompt)[1:]
     
-    tokenized_descriptions = tokenize_api_descriptions(api_list, tokenizer)
+    tokenized_descriptions = tokenize_api_descriptions(descriptions, tokenizer)
     logits_for_descriptions = []
     
     for description_index in range(len(tokenized_descriptions)):
@@ -77,7 +71,7 @@ def tokenwise_relationship_classification(model, prompt, relationship_phrase, to
             # print("Logits list:", logits_for_descriptions)
             # print("New prompt:", tokenized_api_prompt)
         
-        print("")
+        # print("")
     
     final_probabilities = []
     
@@ -86,7 +80,7 @@ def tokenwise_relationship_classification(model, prompt, relationship_phrase, to
 
     largest_probability_index = mx.argmax(mx.softmax(mx.array(final_probabilities), axis=-1)).item()
     
-    most_probable_api_name = api_list[largest_probability_index]
+    most_probable_api_name = descriptions[largest_probability_index]
     
     # print("Softmax probabilities list:", mx.softmax(mx.array(final_probabilities), axis=-1))
     
@@ -97,10 +91,10 @@ def tokenwise_relationship_classification(model, prompt, relationship_phrase, to
     return most_probable_api_name
 
 def cosine_similarity_classification(model, prompt, tokenizer, list_path):
-    api_list = extract_descriptions(list_path)
+    descriptions = extract_descriptions(list_path)
     
-    tokenized_prompt = tokenizer.encode(prompt)
-    tokenized_descriptions = tokenize_api_descriptions(api_list, tokenizer)
+    tokenized_prompt = tokenizer.encode(prompt)[1:]
+    tokenized_descriptions = tokenize_api_descriptions(descriptions, tokenizer)
     
     prompt_embedding, _ = model(mx.array(tokenized_prompt)[None])
     prompt_embedding = prompt_embedding[0].mean(axis=0)
@@ -109,21 +103,38 @@ def cosine_similarity_classification(model, prompt, tokenizer, list_path):
     
     for description in tokenized_descriptions:
         description_embedding, _ = model(mx.array(description)[None])
-        description_embedding = description_embedding[0].mean(axis=0)  # Mean pooling
+        description_embedding = description_embedding[0].mean(axis=0)
         
         sim = cosine_similarity([prompt_embedding], [description_embedding])[0][0]
         similarities.append(sim)
     
-    return similarities
+    largest_similarity_index = mx.argmax(mx.softmax(mx.array(similarities), axis=-1)).item()
+    
+    most_probable_api_name = descriptions[largest_similarity_index]
+    
+    return most_probable_api_name
 
 # benchmark
-def evaluate_talc(results, description):
-    for prompt, scores in results.items():
-        most_probable_description = max(scores, key=scores.get)
-        print(f"Prompt: {prompt}")
-        print(f"Most Probable API Description: {most_probable_description}")
-        print(f"Actual Description: {description}")
-        print(f"Match: {most_probable_description == description}\n")
+def evaluate_talc(model, prompt, relationship_phrase, tokenizer, list_path):
+    count = 0
+    right = 0
+    descriptions = extract_descriptions(list_path)
+    
+    for description in descriptions:
+        prompts = get_prompts_from_description(description, list_path)
+        
+        for prompt in prompts:
+            talc_output = tokenwise_relationship_classification(model, prompt, relationship_phrase, tokenizer, list_path)
+            
+            if talc_output == description:
+                right += 1
+            
+            count += 1
+    
+    final_score = right / count
+    
+    return final_score
+    
 
 # def trivial_llm_classification(api_list, prompts):
 #     # Assuming you have a local LLM server or using a Hugging Face pipeline

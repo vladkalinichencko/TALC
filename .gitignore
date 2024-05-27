@@ -1,4 +1,3 @@
-/Users/vladislavkalinichenko/NexTAgentSLM/TALC/mlx_model/
-/Users/vladislavkalinichenko/NexTAgentSLM/TALC/mlx_model/consolidated.safetensors
-/Users/vladislavkalinichenko/NexTAgentSLM/TALC/mlx_model/params.json
-/Users/vladislavkalinichenko/NexTAgentSLM/TALC/mlx_model/tokenizer.model.v3
+mlx_model/consolidated.safetensors
+mlx_model/params.json
+mlx_model/tokenizer.model.v3

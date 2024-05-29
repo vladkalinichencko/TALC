@@ -10,7 +10,7 @@
       ]
     },
     {
-      "description": "Edit event. Parameters: Event title.”,
+      "description": "Edit event. Parameters: Event title.",
       "prompts": [
         "Modify the details of the 'Team Meeting' event scheduled for next Monday.",
         "Update the time of the 'Training Session' event to 4:00 PM.",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "description": "Delete event. Parameter: Event title.”,
+      "description": "Delete event. Parameter: Event title.",
       "prompts": [
         "Delete the 'Dentist Appointment' event from my calendar.",
         "Remove the 'Conference' event scheduled for next Wednesday.",
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "description": "Search events. Parameter: Search query.”,
+      "description": "Search events. Parameter: Search query.",
       "prompts": [
         "Search for events related to 'project meeting'.",
         "Find all events with 'birthday' in the title.",
@@ -90,7 +90,7 @@
       ]
     },
     {
-      "description": "Share event. Parameter: Event title.”,
+      "description": "Share event. Parameter: Event title.",
       "prompts": [
         "Share the details of the 'Team Lunch' event with Sarah.",
         "Send the information about the 'Training Workshop' event to John.",
@@ -120,7 +120,7 @@
       ]
     },
     {
-      "description": “Add contacts to event. Parameters: Event title, contact list.",
+      "description": "Add contacts to event. Parameters: Event title, contact list.",
       "prompts": [
         "Invite Sarah, John, and Emily to the 'Team Lunch' event.",
         "Send invitations to the 'Product Demo' event to all team members.",
@@ -180,7 +180,7 @@
       ]
     },
     {
-      "description": "Copy event. Parameter: Event title.”,
+      "description": "Copy event. Parameter: Event title.",
       "prompts": [
         "Copy the 'Team Meeting' event.",
         "Duplicate the 'Project Kickoff' meeting.",
@@ -220,7 +220,7 @@
       ]
     },
     {
-      "description": "Share calendar. Parameters: Calendar name, contact.”,
+      "description": "Share calendar. Parameters: Calendar name, contact.",
       "prompts": [
         "Share the 'Work' calendar with Sarah.",
         "Send the 'Personal' calendar to John.",
@@ -250,7 +250,7 @@
       ]
     },
     {
-      "description": "View weather forecast. Parameter: Time.”,
+      "description": "View weather forecast. Parameter: Time.",
       "prompts": [
         "Check weather forecast for tomorrow.",
         "View upcoming weather forecast.",
@@ -290,7 +290,7 @@
       ]
     },
     {
-      "description": "View task list. Parameters: Event title.”,
+      "description": "View task list. Parameters: Event title.",
       "prompts": [
         "Show tasks associated with the 'Team Meeting' event.",
         "View task list for 'Project Kickoff' meeting.",
@@ -300,7 +300,7 @@
       ]
     },
     {
-      "description": "Delete task. Parameter: Task title.”,
+      "description": "Delete task. Parameter: Task title.",
       "prompts": [
         "Remove 'Prepare Presentation' task from the list.",
         "Delete 'Send Invitations' task for 'Project Kickoff' meeting.",
@@ -310,7 +310,7 @@
       ]
     },
     {
-      "description": "Mark task as completed. Parameter: Task title.”,
+      "description": "Mark task as completed. Parameter: Task title.",
       "prompts": [
         "Mark 'Prepare Presentation' task as completed.",
         "Complete 'Send Invitations' task for 'Project Kickoff' meeting.",
@@ -340,7 +340,7 @@
       ]
     },
     {
-      "description": "View task details. Parameter: Task title.”,
+      "description": "View task details. Parameter: Task title.",
       "prompts": [
         "Show details of 'Prepare Presentation' task.",
         "View details of 'Send Invitations' task for 'Project Kickoff' meeting.",
@@ -350,7 +350,7 @@
       ]
     },
     {
-      "description": "Add subtask. Parameters: Task title, subtask title.”,
+      "description": "Add subtask. Parameters: Task title, subtask title.",
       "prompts": [
         "Add 'Create Slides' subtask to 'Prepare Presentation' task.",
         "Include 'Send Emails' subtask for 'Send Invitations' task.",
@@ -385,8 +385,7 @@
         "Set due date for 'Create Slides' subtask to tomorrow.",
         "Assign due date for 'Send Emails' subtask for next week.",
         "Set due date for 'Gather Data' subtask to end of the month.",
-        "Assign due date for
-   'Check Equipment' subtask for next Wednesday.",
+        "Assign due date for 'Check Equipment' subtask for next Wednesday.",
         "Set due date for 'Test Software' subtask to Friday."
       ]
     },

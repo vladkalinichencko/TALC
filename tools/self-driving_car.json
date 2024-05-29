@@ -1,3 +1,4 @@
+[
 {
   "description": "Adjust car speed. Parameter: Desired speed.",
   "prompts": [
@@ -52,7 +53,7 @@
   "prompts": [
     "Open the windows.",
     "Roll up the front passenger window.",
-    "I need some fresh air, open the windows.",
+    "I need some fresh air, open the windows."
   ]
 },
 {
@@ -89,7 +90,7 @@
     "Turn on the wipers.",
     "Switch off the wipers, please.",
     "I need the wipers on high speed.",
-    "Can you turn on the wipers at low speed?",
+    "Can you turn on the wipers at low speed?"
   ]
 },
 {
@@ -133,7 +134,7 @@
   ]
 },
 {
-  "description": "Toggle seat heaters. Parameter: Temperature.”,
+  "description": "Toggle seat heaters. Parameter: Temperature.",
   "prompts": [
     "Turn on the seat heaters.",
     "Switch off the seat heaters, please.",
@@ -157,18 +158,18 @@
   "prompts": [
     "Open the trunk.",
     "Can you pop the trunk?",
-    "I need to access the trunk.",
+    "I need to access the trunk."
   ]
 },
 {
-  "description": “Close trunk.",
+  "description": "Close trunk.",
   "prompts": [
     "Close the trunk, please.",
     "Close the trunk for me."
   ]
 },
 {
-  "description": “Set audio volume. Parameter: Volume level.",
+  "description": "Set audio volume. Parameter: Volume level.",
   "prompts": [
     "Make it louder.",
     "Turn the volume down.",
@@ -188,7 +189,7 @@
   ]
 },
 {
-  "description": "Make phone calls. Parameter: Contact or number.”,
+  "description": "Make phone calls. Parameter: Contact or number.",
   "prompts": [
     "Call my wife.",
     "Can you dial John's number?",
@@ -198,7 +199,7 @@
   ]
 },
 {
-  "description": “Toggle parking sensors.",
+  "description": "Toggle parking sensors.",
   "prompts": [
     "Turn on the parking sensors.",
     "Switch off the parking sensors, please.",
@@ -298,7 +299,7 @@
   ]
 },
 {
-  "description": “Toggle entertainment system.",
+  "description": "Toggle entertainment system.",
   "prompts": [
     "Play a movie in the back.",
     "Can you adjust the volume on the rear entertainment system?",
@@ -328,7 +329,7 @@
   ]
 },
 {
-  "description": “Toggle ambient noise cancellation.",
+  "description": "Toggle ambient noise cancellation.",
   "prompts": [
     "Turn on noise cancellation.",
     "Switch off noise cancellation, please.",
@@ -338,7 +339,7 @@
   ]
 },
 {
-  "description": “Toggle blind-spot monitoring.",
+  "description": "Toggle blind-spot monitoring.",
   "prompts": [
     "Turn on blind-spot monitoring.",
     "Switch off blind-spot monitoring, please.",
@@ -368,7 +369,7 @@
   ]
 },
 {
-  "description": "Set maximum acceleration limit. Parameter: Speed”,
+  "description": "Set maximum acceleration limit. Parameter: Speed",
   "prompts": [
     "Limit the acceleration to 80%.",
     "Reduce the maximum acceleration, please.",
@@ -378,7 +379,7 @@
   ]
 },
 {
-  "description": “Toggle driver attention monitoring.",
+  "description": "Toggle driver attention monitoring.",
   "prompts": [
     "Turn on driver attention monitoring.",
     "Switch off driver attention monitoring, please.",
@@ -408,22 +409,22 @@
   ]
 },
 {
-  "description": “Open panoramic roof.",
+  "description": "Open panoramic roof.",
   "prompts": [
     "Open the sunroof.",
     "Can you open the panoramic roof?",
-    "I need some fresh air, open the roof.",
+    "I need some fresh air, open the roof."
   ]
 },
 {
-  "description": “Close panoramic roof.",
+  "description": "Close panoramic roof.",
   "prompts": [
     "Close the sunroof, please.",
     "Close the panoramic roof."
   ]
 },
 {
-  "description": “Enable auto lane centering.",
+  "description": "Enable auto lane centering.",
   "prompts": [
     "Engage auto lane centering.",
     "Can you turn on auto lane centering?",
@@ -453,7 +454,7 @@
   ]
 },
 {
-  "description": “Toggle air purification.",
+  "description": "Toggle air purification.",
   "prompts": [
     "Turn on the air purifier.",
     "Switch off the air purifier, please.",
@@ -473,7 +474,7 @@
   ]
 },
 {
-  "description": “Adjust cabin humidity. Parameter: Humidity level.",
+  "description": "Adjust cabin humidity. Parameter: Humidity level.",
   "prompts": [
     "Make the air a little more humid.",
     "Can you dry out the air in here?",
@@ -493,7 +494,7 @@
   ]
 },
 {
-  "description": "Play music. Parameter: Search query.”,
+  "description": "Play music. Parameter: Search query.",
   "prompts": [
     "Play some jazz music.",
     "Play the Beatles.",
@@ -524,11 +525,11 @@
   "description": "Skip to the previous track.",
   "prompts": [
     "Previous track.",
-    "Go back to the last song.",
+    "Go back to the last song."
   ]
 },
 {
-  "description": "Adjust audio source. Parameter: Source of music.”,
+  "description": "Adjust audio source. Parameter: Source of music.",
   "prompts": [
     "Switch to Bluetooth audio.",
     "Can you play from my phone?",
@@ -568,7 +569,7 @@
   ]
 },
 {
-  "description": “Open app. Parameter: App name.",
+  "description": "Open app. Parameter: App name.",
   "prompts": [
     "Switch to Waze.",
     "Open Spotify on CarPlay.",
@@ -598,7 +599,7 @@
   ]
 },
 {
-  "description": "Check the weather. Parameter: Location, time.”,
+  "description": "Check the weather. Parameter: Location, time.",
   "prompts": [
     "What's the weather like today?",
     "Check the weather forecast for tomorrow.",
@@ -607,3 +608,4 @@
     "Can you show me the weather radar?"
   ]
 }
+]

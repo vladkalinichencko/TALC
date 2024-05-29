@@ -1,3 +1,4 @@
+[
 {
   "description": "Toggle lights. Parameter: Room.",
   "prompts": [
@@ -49,7 +50,7 @@
   ]
 },
 {
-  "description": “Toggle window blinds.",
+  "description": "Toggle window blinds.",
   "prompts": [
     "Close the blinds in the living room.",
     "Open the blinds in the bedroom.",
@@ -109,7 +110,7 @@
   ]
 },
 {
-  "description": “Toggle curtains opening.”,
+  "description": "Toggle curtains opening.",
   "prompts": [
     "Close the curtains in the living room.",
     "Open the curtains in the bedroom.",
@@ -127,10 +128,10 @@
   ]
 },
 {
-  "description": “Stop music.",
+  "description": "Stop music.",
   "prompts": [
     "Pause the music.",
-    "Stop the music.",
+    "Stop the music."
   ]
 },
 {
@@ -174,7 +175,7 @@
   ]
 },
 {
-  "description": "Toggle smoke detectors.”,
+  "description": "Toggle smoke detectors.",
   "prompts": [
     "Enable the smoke detector in the kitchen.",
     "Disable the smoke detector in the living room.",
@@ -202,7 +203,7 @@
     "Stop the humidifier.",
     "I need the air to be more humid."
   ]
-}
+},
 {
   "description": "Toggle air purifier.",
   "prompts": [
@@ -254,7 +255,7 @@
   ]
 },
 {
-  "description": “Activate pet feeder.",
+  "description": "Activate pet feeder.",
   "prompts": [
     "Feed the pets.",
     "Can you dispense food for the pets?",
@@ -272,7 +273,7 @@
   ]
 },
 {
-  "description": “Set thermostat mode. Parameter: Thermostat mode.",
+  "description": "Set thermostat mode. Parameter: Thermostat mode.",
   "prompts": [
     "Set the thermostat to heat.",
     "Switch the thermostat to cool.",
@@ -462,3 +463,4 @@
 "I need to know the current air quality."
 ]
 }
+]

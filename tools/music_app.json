@@ -1,3 +1,4 @@
+[
 {
     "description": "Play song. Parameter: Search query",
     "prompts": [
@@ -99,7 +100,7 @@
     ]
   },
   {
-    "description": "Add song to library. Parameter: Song.”,
+    "description": "Add song to library. Parameter: Song.",
     "prompts": [
       "Add this song to my library.",
       "Can you save this track to my collection?",
@@ -109,7 +110,7 @@
     ]
   },
   {
-    "description": "Remove song from library. Parameter: Song.”,
+    "description": "Remove song from library. Parameter: Song.",
     "prompts": [
       "Remove this song from my library.",
       "Can you delete this track from my collection?",
@@ -129,7 +130,7 @@
     ]
   },
   {
-    "description": "Delete playlist. Parameter: Playlist name.”,
+    "description": "Delete playlist. Parameter: Playlist name.",
     "prompts": [
       "Delete my 'Road Trip' playlist.",
       "Can you remove the 'Chill Vibes' playlist?",
@@ -139,7 +140,7 @@
     ]
   },
   {
-    "description": "Share song. Parameter: Contact.”,
+    "description": "Share song. Parameter: Contact.",
     "prompts": [
       "Share this song with John.",
       "Can you send this track to Emily?",
@@ -289,7 +290,7 @@
     ]
   },
   {
-    "description": "Add song to queue. Parameter: Song name.”,
+    "description": "Add song to queue. Parameter: Song name.",
     "prompts": [
       "Add this song next in the queue.",
       "Can you put this track at the top of my queue?",
@@ -299,7 +300,7 @@
     ]
   },
   {
-    "description": "Remove song from queue. Parameter: Song name.”,
+    "description": "Remove song from queue. Parameter: Song name.",
     "prompts": [
       "Remove the next song from the queue.",
       "Can you take the third track out of the queue?",
@@ -488,4 +489,4 @@
       "View my data statistics."
     ]
   }
-  
+]

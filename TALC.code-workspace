@@ -1,13 +1,7 @@
 {
-	"folders": [
-		{
-			"name": "TALC",
-			"path": "."
-		},
-		{
-			"name": "tools",
-			"path": "../../Downloads/mlx-examples-main/n-ext_agent_slm/tools"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }

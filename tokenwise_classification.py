@@ -1,7 +1,10 @@
+from mlx_lm import load, generate, convert
 import mlx.core as mx
 import json
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+
+# data preparation
 
 def extract_descriptions(filename):
     descriptions = []
@@ -36,6 +39,19 @@ def tokenize_api_descriptions(descriptions, tokenizer):
         tokenized_descriptions.append(tokenized_description[1:])
     
     return tokenized_descriptions
+
+def description_to_name(description):
+    name = description.join(' ', '_')
+    
+    return name
+
+def generate_tool_prompt(model_name, filename):
+    if model_name == 'mistral':
+        pass
+    elif model_name == 'command r':
+        pass
+
+# classification methods
 
 def tokenwise_relationship_classification(model, prompt, relationship_phrase, tokenizer, list_path):
     descriptions = extract_descriptions(list_path)
@@ -114,7 +130,8 @@ def cosine_similarity_classification(model, prompt, tokenizer, list_path):
     
     return most_probable_api_name
 
-# benchmark
+# benchmarks
+
 def evaluate_talc(model, prompt, relationship_phrase, tokenizer, list_path):
     count = 0
     right = 0
@@ -134,23 +151,48 @@ def evaluate_talc(model, prompt, relationship_phrase, tokenizer, list_path):
     final_score = right / count
     
     return final_score
-    
 
-# def trivial_llm_classification(api_list, prompts):
-#     # Assuming you have a local LLM server or using a Hugging Face pipeline
-#     classifier = pipeline("text-classification", model="distilbert-base-uncased")  # Replace with actual model if needed
-#     results = {}
+def evaluate_cos_sim(model, prompt, tokenizer, list_path):
+    count = 0
+    right = 0
+    descriptions = extract_descriptions(list_path)
     
-#     for prompt in prompts:
-#         results[prompt] = []
-#         for api in api_list:
-#             api_name = api["API_call"].get("name", "")
-#             api_desc = api["API_call"].get("description", "")
-#             full_prompt = f"Does the following prompt: '{prompt}' match any of the API functions? Reply with only the function's name."
-#             result = classifier(full_prompt)
-#             results[prompt].append((api_name, result))
+    for description in descriptions:
+        prompts = get_prompts_from_description(description, list_path)
+        
+        for prompt in prompts:
+            cos_sim_output = cosine_similarity_classification(model, prompt, tokenizer, list_path)
+            
+            if cos_sim_output == description:
+                right += 1
+            
+            count += 1
     
-#     return results
+    final_score = right / count
+    
+    return final_score
+
+def evaluate_typical_method(model_name, model, prompt, tokenizer, list_path):
+    count = 0
+    right = 0
+    descriptions = extract_descriptions(list_path)
+    base_prompt = generate_tool_prompt(model_name, list_path)
+    
+    for description in descriptions:
+        prompts = get_prompts_from_description(description, list_path)
+        
+        for user_prompt in prompts:
+            prompt = base_prompt + user_prompt
+            output = generate(model, tokenizer, prompt=prompt, verbose=True)
+            
+            if description_to_name(description) in output:
+                right += 1
+            
+            count += 1
+    
+    final_score = right / count
+    
+    return final_score
 
 # def main():
 #     file_path = '/mnt/data/input.json'  # Path to the JSON file

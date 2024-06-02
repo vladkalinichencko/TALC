@@ -1,0 +1,20 @@
+[
+    {
+        "description": "Toggle garage door.",
+        "prompts": [
+            "Open the garage."
+        ]
+    },
+    {
+        "description": "Toggle curtains opening.",
+        "prompts": [
+            "Close the curtains in the living room."
+        ]
+    },
+    {
+        "description": "Play music.",
+        "prompts": [
+            "Play some music."
+        ]
+    }
+]

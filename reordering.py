@@ -1,7 +1,6 @@
 import json
+# import nltk
 from nltk.tokenize import word_tokenize
-
-import nltk
 
 # try:
 #     _create_unverified_https_context = ssl._create_unverified_context

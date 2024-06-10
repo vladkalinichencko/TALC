@@ -60,11 +60,67 @@ def generate_tool_prompt(model_name, filename):
 
 # classification methods
 
+# def tokenwise_relationship_classification(model, prompt, relationship_phrase, tokenizer, list_path):
+#     descriptions = extract_descriptions(list_path)
+    
+#     augmented_prompt = prompt + " " + relationship_phrase + ""
+#     tokenized_prompt = tokenizer.encode(augmented_prompt)[1:]
+    
+#     tokenized_descriptions = tokenize_api_descriptions(descriptions, tokenizer)
+#     logits_for_descriptions = []
+
+#     for description_index in range(len(tokenized_descriptions)):
+#         description = tokenized_descriptions[description_index]
+#         logits_for_descriptions.append([])
+#         tokenized_api_prompt = tokenized_prompt.copy() # + description
+#         logits = model(mx.array(tokenized_api_prompt)[None])
+        
+#         for index in range(len(description)):
+#             token = description[index]
+
+#             token_logits = logits[:, -len(description) - 1 + index, :]
+#             token_logits = token_logits[0]
+#             logit = token_logits[token].item()
+            
+#             # print("Tokenized description:", description)
+#             print("Description:", tokenizer.decode(description))
+#             # print("Token index:", index)
+#             # print("Token:", token)
+#             print("Symbol:", tokenizer.decode(token))
+#             # print("Logits:", logits)
+#             # print("Logit:", logit)
+            
+#             logits_for_descriptions[description_index].append(logit)
+#             tokenized_api_prompt.append(token)
+            
+#             # print("Logits list:", logits_for_descriptions)
+#             # print("New tokenized prompt:", tokenized_api_prompt)
+#             # print("New prompt:", tokenizer.decode(tokenized_api_prompt))
+        
+#         # print("")
+    
+#     final_probabilities = []
+    
+#     for probabilities_list in logits_for_descriptions:
+#         final_probabilities.append(sum(probabilities_list) / len(probabilities_list))
+
+#     largest_probability_index = mx.argmax(mx.softmax(mx.array(final_probabilities), axis=-1)).item()
+    
+#     most_probable_api_name = descriptions[largest_probability_index]
+    
+#     # print("Softmax probabilities list:", mx.softmax(mx.array(final_probabilities), axis=-1))
+    
+#     # print("Final probabilities:", final_probabilities)
+#     # print("Largest probability index:", largest_probability_index)
+#     # print("Most probable API name:", most_probable_api_name)
+    
+#     return most_probable_api_name
+
 def tokenwise_relationship_classification(model, prompt, relationship_phrase, tokenizer, list_path):
     descriptions = extract_descriptions(list_path)
     
     augmented_prompt = prompt + " " + relationship_phrase + ""
-    tokenized_prompt = tokenizer.encode(augmented_prompt)[1:]
+    tokenized_prompt = tokenizer.encode(augmented_prompt)
     
     tokenized_descriptions = tokenize_api_descriptions(descriptions, tokenizer)
     logits_for_descriptions = []
@@ -72,7 +128,7 @@ def tokenwise_relationship_classification(model, prompt, relationship_phrase, to
     for description_index in range(len(tokenized_descriptions)):
         description = tokenized_descriptions[description_index]
         logits_for_descriptions.append([])
-        tokenized_api_prompt = tokenized_prompt.copy() # + description
+        tokenized_api_prompt = tokenized_prompt.copy() + description
         logits = model(mx.array(tokenized_api_prompt)[None])
         
         for index in range(len(description)):
@@ -80,7 +136,20 @@ def tokenwise_relationship_classification(model, prompt, relationship_phrase, to
 
             token_logits = logits[:, -len(description) - 1 + index, :]
             token_logits = token_logits[0]
+            token_logits = mx.softmax(token_logits)
+            token_logits = mx.log(token_logits)
+            
             logit = token_logits[token].item()
+            
+            logits_for_descriptions[description_index].append(logit)
+
+            # print('token', token)
+            # print('logit', logit)
+            # print('logits for token', token_logits)
+            # print(max(token_logits))
+            # print(min(token_logits))
+            # print(sum(token_logits))
+            # print('')
             
             # print("Tokenized description:", description)
             # print("Description:", tokenizer.decode(description))
@@ -89,10 +158,6 @@ def tokenwise_relationship_classification(model, prompt, relationship_phrase, to
             # print("Symbol:", tokenizer.decode(token))
             # print("Logits:", logits)
             # print("Logit:", logit)
-            
-            logits_for_descriptions[description_index].append(logit)
-            tokenized_api_prompt.append(token)
-            
             # print("Logits list:", logits_for_descriptions)
             # print("New tokenized prompt:", tokenized_api_prompt)
             # print("New prompt:", tokenizer.decode(tokenized_api_prompt))
@@ -102,18 +167,17 @@ def tokenwise_relationship_classification(model, prompt, relationship_phrase, to
     final_probabilities = []
     
     for probabilities_list in logits_for_descriptions:
-        
-        final_probabilities.append(sum(probabilities_list) / len(probabilities_list))
+        final_probabilities.append(sum(probabilities_list))
 
-    largest_probability_index = mx.argmax(mx.softmax(mx.array(final_probabilities), axis=-1)).item()
+    largest_probability_index = mx.argmax(mx.array(final_probabilities)).item()
     
     most_probable_api_name = descriptions[largest_probability_index]
     
-    # print("Softmax probabilities list:", mx.softmax(mx.array(final_probabilities), axis=-1))
-    
+    # print("Softmax probabilities list:", mx.softmax(mx.array(final_probabilities)))
     # print("Final probabilities:", final_probabilities)
     # print("Largest probability index:", largest_probability_index)
     # print("Most probable API name:", most_probable_api_name)
+    print(max(mx.array(final_probabilities)))
     
     return most_probable_api_name
 
@@ -130,7 +194,6 @@ def cosine_similarity_classification(model, prompt, tokenizer, list_path):
     similarities = []
     
     for description in tokenized_descriptions:
-        
         description_embedding = model(mx.array(description)[None])
         description_embedding = description_embedding[0].mean(axis=0)
         description_embedding = description_embedding.reshape(1, -1)
@@ -147,6 +210,8 @@ def cosine_similarity_classification(model, prompt, tokenizer, list_path):
     most_probable_api_name = descriptions[largest_similarity_index]
     
     return most_probable_api_name
+
+
 
 # benchmarks
 

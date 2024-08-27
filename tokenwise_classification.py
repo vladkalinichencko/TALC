@@ -6,6 +6,9 @@ from sentence_transformers import SentenceTransformer
 from typical_data import *
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy import stats
 
 
 def legacy_tokenwise_relationship_classification(model, prompt, relationship_phrase, tokenizer, list_path):
@@ -100,46 +103,68 @@ def get_top_similar(probabilities, similarity_threshold):
 
 def right_tokenwise_relationship_classification(model, prompt, relationship_phrase, tokenizer, list_path):
     descriptions = extract_descriptions(list_path)
-    
+
     augmented_prompt = "A user asks to " + prompt + " " + relationship_phrase + " "
     tokenized_prompt = tokenizer.encode(augmented_prompt)
-    
+
     tokenized_descriptions = tokenize_api_descriptions(descriptions, tokenizer)
-    
+
     logits_for_position = []
     for i in tokenized_descriptions:
         logits_for_position.append((tokenizer.decode(i), 0, True))
-    
+
     prob_threshold = 0
     
+    # Prepare for visualization
+    plt.figure(figsize=(15, 10))
+    
     for position in range(find_longest_tokenized_description(tokenized_descriptions)):
+        position_logits = []
+        
         for index in range(len(tokenized_descriptions)):
             description = tokenized_descriptions[index]
             tokenized_api_prompt = tokenized_prompt.copy() + description
             logits = model(mx.array(tokenized_api_prompt)[None])[0]
-            
+
             token = description[min(position, len(description) - 1)]
-            
+
             token_logits = logits[(-len(description) + position):]
             token_logits = token_logits[0]
             token_logits = mx.softmax(token_logits)
-            
-            print(mx.argmax(token_logits))
-            
+
             token_logits = mx.log(token_logits)
             logit = token_logits[token].item()
-            
+            position_logits.append(logit)
+
             prev_prob = logits_for_position[index][1]
             new_prob = (prev_prob + logit) / (position + 1)
             b = logits_for_position[index][2]
-            
+
             logits_for_position[index] = (tokenizer.decode(description), new_prob, b)
+
+        # Visualize probability distribution for this position
+        plt.subplot(3, 2, (position % 6) + 1)
+        sns.histplot(position_logits, kde=True)
+        plt.title(f'Probability Distribution at Position {position}')
+        plt.xlabel('Log Probability')
+        plt.ylabel('Frequency')
         
+        # Error approximation
+        error_approx = np.std(position_logits) / np.sqrt(len(position_logits))
+        error_approx = round(error_approx, 1)  # Round to 0.1 fraction
+        plt.text(0.7, 0.9, f'Error Approx: {error_approx}', transform=plt.gca().transAxes)
+
+        if position % 6 == 5 or position == len(tokenized_descriptions) - 1:
+            plt.tight_layout()
+            plt.show()
+            if position < len(tokenized_descriptions) - 1:
+                plt.figure(figsize=(15, 10))
+
         filtered_logits = [x for x in logits_for_position if x[2]]
         sorted_filtered_logits = sorted(filtered_logits, key=lambda x: x[1], reverse=True)
-        
+
         prob_threshold = sorted_filtered_logits[len(sorted_filtered_logits)//2][1]
-        
+
         updated_logits_for_position = []
         for i in logits_for_position:
             decoded_description, prob, flag = i
@@ -149,17 +174,28 @@ def right_tokenwise_relationship_classification(model, prompt, relationship_phra
                 new_tuple = i
             updated_logits_for_position.append(new_tuple)
         logits_for_position = updated_logits_for_position
-        
+
         print(position, 'position')
         print(*sorted_filtered_logits)
         print('')
-    
+
     print('')
     sorted_filtered_logits = sorted(logits_for_position, key=lambda x: x[1], reverse=True)
     print(*sorted_filtered_logits)
     print('')
-    
-    return 'Finished!'
+
+    # Final visualization: comparing top candidates
+    top_candidates = sorted_filtered_logits[:5]  # Adjust number as needed
+    plt.figure(figsize=(10, 6))
+    sns.barplot(x=[c[0] for c in top_candidates], y=[c[1] for c in top_candidates])
+    plt.title('Top Candidates Comparison')
+    plt.xlabel('Description')
+    plt.ylabel('Final Probability')
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.show()
+
+    return top_candidates[0][0]  # Return the description with highest probability
 
 def evaluate_talc(model, relationship_phrase, tokenizer, list_path):
     count = 0

@@ -1,0 +1,466 @@
+[
+{
+  "description": "Toggle lights. Parameter: Room.",
+  "prompts": [
+    "Can you brighten the living room?",
+    "Make the kitchen more illuminated.",
+    "Dim the bedroom a bit.",
+    "Switch off the hallway.",
+    "I need the bathroom to be lit."
+  ]
+},
+{
+  "description": "Adjust temperature. Parameter: Desired temperature.",
+  "prompts": [
+    "Make it warmer in here.",
+    "Set the temperature to 72 degrees.",
+    "I'm cold, can you raise the temperature?",
+    "Cool down the house to 68 degrees.",
+    "Make it a little cooler, please."
+  ]
+},
+{
+  "description": "Toggle garage door.",
+  "prompts": [
+    "Open the garage.",
+    "Close the garage door.",
+    "Can you shut the garage?",
+    "Let's open the garage.",
+    "I need the garage closed."
+  ]
+},
+{
+  "description": "Toggle front door lock.",
+  "prompts": [
+    "Lock the front door.",
+    "Unlock the front door.",
+    "Make sure the front door is secure.",
+    "Can you open the front door lock?",
+    "I need to get in, unlock the front door."
+  ]
+},
+{
+  "description": "Toggle security system.",
+  "prompts": [
+    "Arm the security system.",
+    "Disarm the security system.",
+    "Make sure the house is secure.",
+    "Can you turn off the alarm?",
+    "I need the system disarmed."
+  ]
+},
+{
+  "description": "Toggle window blinds.",
+  "prompts": [
+    "Close the blinds in the living room.",
+    "Open the blinds in the bedroom.",
+    "Let's lower the blinds in the kitchen.",
+    "Can you raise the blinds in the office?",
+    "I need the blinds fully open."
+  ]
+},
+{
+  "description": "Toggle ceiling fan.",
+  "prompts": [
+    "Turn on the ceiling fan in the bedroom.",
+    "Switch off the ceiling fan in the living room.",
+    "Can you make the ceiling fan in the dining room go faster?",
+    "Turn the fan in the office to low speed.",
+    "I need the fan off."
+  ]
+},
+{
+  "description": "Adjust speaker volume. Parameter: Volume level.",
+  "prompts": [
+    "Make it louder.",
+    "Turn the volume down.",
+    "Set the volume to 5.",
+    "Can you lower the volume a bit?",
+    "I need the volume at 10."
+  ]
+},
+{
+  "description": "Set alarm time. Parameter: Alarm time.",
+  "prompts": [
+    "Wake me up at 7:00 AM tomorrow.",
+    "Set an alarm for 8:30 AM.",
+    "Can you wake me up at 6:45 AM?",
+    "Alarm for 9:15 AM, please.",
+    "I need to be woken up at 10:00 AM tomorrow."
+  ]
+},
+{
+  "description": "Toggle motion sensors.",
+  "prompts": [
+    "Enable the motion sensor in the hallway.",
+    "Disable the motion sensor in the living room.",
+    "Can you turn on the motion sensor in the garage?",
+    "Turn off the motion sensor in the backyard.",
+    "I need the motion sensor in the kitchen disabled."
+  ]
+},
+{
+  "description": "Adjust TV brightness.",
+  "prompts": [
+    "Make the TV brighter.",
+    "Dim the TV.",
+    "Set the TV brightness to 50%.",
+    "Can you reduce the TV brightness?",
+    "I need the TV at 75% brightness."
+  ]
+},
+{
+  "description": "Toggle curtains opening.",
+  "prompts": [
+    "Close the curtains in the living room.",
+    "Open the curtains in the bedroom.",
+    "Let's lower the curtains in the kitchen.",
+    "Can you raise the curtains in the office?",
+    "I need the curtains fully open."
+  ]
+},
+{
+  "description": "Start music playback.",
+  "prompts": [
+    "Play some music.",
+    "Can you resume the music?",
+    "I need the music to play."
+  ]
+},
+{
+  "description": "Stop music playback.",
+  "prompts": [
+    "Pause the music.",
+    "Stop the music."
+  ]
+},
+{
+  "description": "Set oven temperature. Parameter: Oven temperature.",
+  "prompts": [
+    "Preheat the oven to 350 degrees.",
+    "Set the oven temperature to 400 degrees.",
+    "Can you heat the oven to 375 degrees?",
+    "Set the oven to 425 degrees, please.",
+    "I need the oven at 325 degrees."
+  ]
+},
+{
+  "description": "Toggle coffee machine.",
+  "prompts": [
+    "Start the coffee machine.",
+    "Turn off the coffee machine.",
+    "Can you make a pot of coffee?",
+    "Stop the coffee brewing.",
+    "I need a fresh pot."
+  ]
+},
+{
+  "description": "Control shower temperature. Parameter: Shower temperature.",
+  "prompts": [
+    "Make the shower warmer.",
+    "Cool down the shower.",
+    "Set the shower temperature to 105 degrees.",
+    "Can you adjust the shower temperature?",
+    "I need the shower hotter."
+  ]
+},
+{
+  "description": "Set sprinkler schedule. Parameter: Sprinkler schedule.",
+  "prompts": [
+    "Water the lawn every Tuesday and Thursday at 6:00 AM.",
+    "Set the sprinklers to run for 30 minutes every other day.",
+    "Can you schedule the sprinklers for Monday, Wednesday, and Friday at 7:00 AM?",
+    "I need the sprinklers to water for 20 minutes on Tuesdays and Fridays.",
+    "Set a watering schedule for the front yard."
+  ]
+},
+{
+  "description": "Toggle smoke detectors.",
+  "prompts": [
+    "Enable the smoke detector in the kitchen.",
+    "Disable the smoke detector in the living room.",
+    "Can you turn off the smoke detector in the hallway?",
+    "Turn on the smoke detector in the bedroom.",
+    "I need the smoke detector in the bathroom disabled."
+  ]
+},
+{
+  "description": "Adjust vacuum cleaner power. Parameter: Vacuum cleaner power.",
+  "prompts": [
+    "Make the vacuum cleaner stronger.",
+    "Reduce the vacuum cleaner power.",
+    "Set the vacuum cleaner power to high.",
+    "Can you adjust the vacuum cleaner power to low?",
+    "I need the vacuum cleaner on medium power."
+  ]
+},
+{
+  "description": "Toggle humidifier.",
+  "prompts": [
+    "Turn on the humidifier.",
+    "Switch off the humidifier.",
+    "Can you humidify the air?",
+    "Stop the humidifier.",
+    "I need the air to be more humid."
+  ]
+},
+{
+  "description": "Toggle air purifier.",
+  "prompts": [
+    "Start the air purifier.",
+    "Turn off the air purifier.",
+    "Can you clean the air?",
+    "Stop the air purifier.",
+    "I need the air purifier on."
+  ]
+},
+{
+  "description": "Adjust dishwasher cycle. Parameter: Dishwasher cycle.",
+  "prompts": [
+    "Set the dishwasher to the heavy cycle.",
+    "Switch the dishwasher to the quick wash.",
+    "Can you change the dishwasher cycle to normal?",
+    "Set the dishwasher to the delicate cycle, please.",
+    "I need the dishwasher on the heavy duty cycle."
+  ]
+},
+{
+  "description": "Set washing machine program. Parameter: Washing machine program.",
+  "prompts": [
+    "Start the washing machine on the cotton cycle.",
+    "Set the washing machine to the delicate program.",
+    "Can you run the washing machine on the quick wash?",
+    "I need the washing machine on the wool program.",
+    "Set the washing machine to the mixed fabrics cycle."
+  ]
+},
+{
+  "description": "Toggle fireplace.",
+  "prompts": [
+    "Light the fireplace.",
+    "Put out the fireplace.",
+    "Can you turn on the fireplace?",
+    "Switch off the fireplace.",
+    "I need the fireplace lit."
+  ]
+},
+{
+  "description": "Adjust doorbell volume. Parameter: Doorbell volume level.",
+  "prompts": [
+    "Make the doorbell louder.",
+    "Lower the doorbell volume.",
+    "Set the doorbell volume to 5.",
+    "Can you reduce the doorbell volume?",
+    "I need the doorbell at 10 volume."
+  ]
+},
+{
+  "description": "Activate pet feeder.",
+  "prompts": [
+    "Feed the pets.",
+    "Can you dispense food for the pets?",
+    "I need the pet feeder to release food."
+  ]
+},
+{
+  "description": "Toggle bathroom heater.",
+  "prompts": [
+    "Turn on the bathroom heater.",
+    "Switch off the bathroom heater.",
+    "Can you warm up the bathroom?",
+    "Stop the bathroom heater.",
+    "I need the bathroom heater on."
+  ]
+},
+{
+  "description": "Set thermostat mode. Parameter: Thermostat mode.",
+  "prompts": [
+    "Set the thermostat to heat.",
+    "Switch the thermostat to cool.",
+    "Can you put the thermostat on auto?",
+    "Set the thermostat to fan only.",
+    "I need the thermostat in cooling mode."
+  ]
+},
+{
+  "description": "Adjust TV volume. Parameter: TV volume",
+  "prompts": [
+    "Make TV louder.",
+    "Turn the TV volume down.",
+    "Set the TV volume to 5.",
+    "Can you lower the volume of a TV a bit?",
+    "I need the TV volume at 10."
+  ]
+},
+{
+  "description": "Set oven timer. Parameter: Oven timer duration.",
+  "prompts": [
+    "Set a timer for 30 minutes.",
+    "Time the oven for 15 minutes.",
+    "Can you set a timer for 20 minutes?",
+    "I need a timer for 45 minutes.",
+    "Set a timer for 1 hour."
+  ]
+},
+{
+  "description": "Toggle garden lights.",
+  "prompts": [
+    "Turn on the garden lights.",
+    "Switch off the garden lights.",
+    "Can you illuminate the garden?",
+    "Turn off the garden lights, please.",
+    "I need the garden lights on."
+  ]
+},
+{
+  "description": "Set refrigerator temperature. Parameter: Refrigerator temperature.",
+  "prompts": [
+    "Make the refrigerator colder.",
+    "Set the refrigerator temperature to 37 degrees.",
+    "Can you adjust the refrigerator temperature?",
+    "I need the refrigerator to be warmer.",
+    "Set the refrigerator temperature to 38 degrees."
+  ]
+},
+{
+  "description": "Adjust bedroom lamp brightness. Parameter: Lamp brightness.",
+  "prompts": [
+    "Make the bedroom lamp brighter.",
+    "Dim the bedroom lamp.",
+    "Set the bedroom lamp to 50% brightness.",
+    "Can you reduce the bedroom lamp brightness?",
+    "I need the bedroom lamp at 75% brightness."
+  ]
+},
+{
+  "description": "Adjust bathroom mirror light intensity. Parameter: Mirror light intensity.",
+  "prompts": [
+    "Make the bathroom mirror light brighter.",
+    "Dim the bathroom mirror light.",
+    "Set the bathroom mirror light to 50% intensity.",
+    "Can you reduce the bathroom mirror light intensity?",
+    "I need the bathroom mirror light at 75% intensity."
+  ]
+},
+{
+  "description": "Toggle kitchen under-cabinet lights.",
+  "prompts": [
+    "Turn on the kitchen under-cabinet lights.",
+    "Switch off the kitchen under-cabinet lights.",
+    "Can you illuminate the kitchen countertops?",
+    "Turn off the kitchen under-cabinet lights, please.",
+    "I need the kitchen under-cabinet lights on."
+  ]
+},
+{
+  "description": "Toggle security camera.",
+  "prompts": [
+    "Turn on the front porch security camera.",
+    "Switch off the front porch security camera.",
+    "Can you start recording on the front porch camera?",
+    "Stop recording on the front porch camera, please.",
+    "I need the front porch security camera on."
+  ]
+},
+{
+  "description": "Toggle garden sprinklers.",
+  "prompts": [
+    "Turn on the backyard garden sprinklers.",
+    "Switch off the backyard garden sprinklers.",
+    "Can you water the garden?",
+    "Stop the backyard garden sprinklers, please.",
+    "I need the backyard garden sprinklers on."
+  ]
+},
+{
+"description": "Toggle air conditioner.",
+"prompts": [
+"Turn on the AC.",
+"Switch off the AC.",
+"Can you cool down the room?",
+"I need the air conditioner on."
+]
+},
+{
+"description": "Adjust air conditioner temperature. Parameter: conditioner temperature.",
+"prompts": [
+"Make it colder.",
+"Set the AC to 72 degrees.",
+"Can you cool it down to 68 degrees?",
+"I need the temperature at 70 degrees."
+]
+},
+{
+"description": "Toggle air conditioner mode. Parameter: conditioner mode.",
+"prompts": [
+"Set the AC to cool mode.",
+"Switch the AC to fan only mode.",
+"Can you put the AC on auto mode?",
+"I need the AC in dry mode."
+]
+},
+{
+"description": "Check smoke detector status.",
+"prompts": [
+"Is the smoke detector working?",
+"Can you check the status of the smoke detector?",
+"I need to know if the smoke detector is active."
+]
+},
+{
+"description": "Check carbon monoxide detector status.",
+"prompts": [
+"Is the carbon monoxide detector working?",
+"Can you check the status of the carbon monoxide detector?",
+"I need to know if the carbon monoxide detector is active."
+]
+},
+{
+"description": "Check water leak sensor status.",
+"prompts": [
+"Is there a water leak?",
+"Can you check the status of the water leak sensor?",
+"I need to know if there's a water leak."
+]
+},
+{
+"description": "Check motion sensor status.",
+"prompts": [
+"Is the motion sensor detecting movement?",
+"Can you check the status of the motion sensor?",
+"I need to know if the motion sensor is active."
+]
+},
+{
+"description": "Check door and window sensor status.",
+"prompts": [
+"Are all doors and windows closed?",
+"Can you check the status of the door/window sensors?",
+"I need to know if any doors or windows are open."
+]
+},
+{
+"description": "Check temperature sensor status.",
+"prompts": [
+"What's the current temperature?",
+"Can you check the temperature sensor reading?",
+"I need to know the current temperature."
+]
+},
+{
+"description": "Check humidity sensor status.",
+"prompts": [
+"What's the current humidity level?",
+"Can you check the humidity sensor reading?",
+"I need to know the current humidity."
+]
+},
+{
+"description": "Check air quality sensor status.",
+"prompts": [
+"Is the air quality good?",
+"Can you check the air quality sensor reading?",
+"I need to know the current air quality."
+]
+}
+]

@@ -1,0 +1,540 @@
+[
+    {
+      "description": "Adjust screen brightness. Parameter: Brightness level.",
+      "prompts": [
+        "Can you increase the brightness level on my screen?",
+        "Make my screen a bit brighter, please.",
+        "I'd like to adjust the brightness to a higher level.",
+        "Dim the screen brightness to a lower setting.",
+        "Set my screen brightness to the middle level."
+      ]
+    },
+    {
+      "description": "Toggle Wi-Fi.",
+      "prompts": [
+        "Could you enable Wi-Fi for me?",
+        "Turn off the Wi-Fi connection, please.",
+        "I'd like to connect to a Wi-Fi network.",
+        "Disable the Wi-Fi on my device.",
+        "Switch on the Wi-Fi settings."
+      ]
+    },
+    {
+      "description": "Toggle Bluetooth.",
+      "prompts": [
+        "Please activate Bluetooth on my device.",
+        "Can you turn off Bluetooth for me?",
+        "I need Bluetooth enabled right now.",
+        "Switch off the Bluetooth connection.",
+        "Turn on Bluetooth so I can connect my headset."
+      ]
+    },
+    {
+      "description": "Adjust volume. Parameter: Volume level.",
+      "prompts": [
+        "Raise the volume a little higher, please.",
+        "Lower the sound volume on my device.",
+        "Set the volume to maximum.",
+        "Adjust the volume to a medium level.",
+        "Can you decrease the volume slightly?"
+      ]
+    },
+    {
+      "description": "Toggle Airplane Mode.",
+      "prompts": [
+        "Please enable Airplane Mode.",
+        "Turn off Airplane Mode for me.",
+        "Activate Airplane Mode on my phone.",
+        "Disable Airplane Mode so I can use Wi-Fi.",
+        "Switch on Airplane Mode to disconnect all networks."
+      ]
+    },
+    {
+      "description": "Toggle Do Not Disturb.",
+      "prompts": [
+        "Can you activate Do Not Disturb?",
+        "Turn off Do Not Disturb for me.",
+        "Enable Do Not Disturb mode.",
+        "Disable Do Not Disturb so I can receive notifications.",
+        "Switch on Do Not Disturb to silence my phone."
+      ]
+    },
+    {
+      "description": "Toggle Cellular Data.",
+      "prompts": [
+        "Please turn on Cellular Data.",
+        "Disable Cellular Data on my device.",
+        "Activate the Cellular Data connection.",
+        "Turn off the mobile data for me.",
+        "Enable my phone's Cellular Data."
+      ]
+    },
+    {
+      "description": "Set Wallpaper.",
+      "prompts": [
+        "Can you set this image as my wallpaper?",
+        "Change my wallpaper to a different picture.",
+        "I'd like to update my home screen wallpaper.",
+        "Set a new background image for my phone.",
+        "Please change the wallpaper to this photo."
+      ]
+    },
+    {
+      "description": "Toggle Dark Mode.",
+      "prompts": [
+        "Can you enable Dark Mode?",
+        "Turn off Dark Mode for me.",
+        "Activate the dark theme on my device.",
+        "Switch off Dark Mode and go back to light mode.",
+        "Enable Dark Mode to save battery."
+      ]
+    },
+    {
+      "description": "Adjust Text Size. Parameter: Text size level.",
+      "prompts": [
+        "Can you make the text size larger?",
+        "Reduce the font size on my screen.",
+        "Adjust the text to a medium size.",
+        "Increase the font size for better readability.",
+        "Make the text smaller to fit more on the screen."
+      ]
+    },
+    {
+      "description": "Toggle Location Services.",
+      "prompts": [
+        "Please enable Location Services.",
+        "Turn off Location Services for me.",
+        "Activate GPS on my device.",
+        "Disable the location tracking.",
+        "Can you switch on Location Services?"
+      ]
+    },
+    {
+      "description": "Toggle Personal Hotspot.",
+      "prompts": [
+        "Can you turn on the Personal Hotspot?",
+        "Disable my Personal Hotspot.",
+        "Enable hotspot so I can share my internet.",
+        "Switch off the Personal Hotspot for me.",
+        "Activate the Personal Hotspot feature."
+      ]
+    },
+    {
+      "description": "Set Date. Parameter: Date.",
+      "prompts": [
+        "Set the current date and time on my device.",
+        "Update the date to today’s date."
+      ]
+    },
+    {
+      "description": "Set Time. Parameter: Time.",
+      "prompts": [
+        "Can you change the time to 3 PM?",
+        "Adjust the time to match the local time zone."
+      ]
+    },
+    {
+      "description": "Adjust Screen Auto-Lock. Parameter: Auto-lock duration.",
+      "prompts": [
+        "Can you set the screen auto-lock to 1 minute?",
+        "Adjust the auto-lock timer to 5 minutes.",
+        "Change the auto-lock setting to 30 seconds.",
+        "Set the screen to never auto-lock.",
+        "Increase the auto-lock duration to 10 minutes."
+      ]
+    },
+    {
+      "description": "Toggle App Notifications. Parameter: App",
+      "prompts": [
+        "Please turn on notifications for all apps.",
+        "Disable app notifications for me.",
+        "Activate notifications for Telegram.",
+        "Turn off notifications for Facebook.",
+        "Enable notifications so I don't miss updates."
+      ]
+    },
+    {
+      "description": "Set Passcode. Parameter: Passcode.",
+      "prompts": [
+        "Can you help me set a new passcode?",
+        "Change my phone's passcode.",
+        "Update the passcode to a more secure one.",
+        "Please set up a new passcode for me.",
+        "I'd like to reset my passcode."
+      ]
+    },
+    {
+      "description": "Toggle iCloud Backup.",
+      "prompts": [
+        "Can you enable iCloud Backup?",
+        "Turn off iCloud Backup for me.",
+        "Activate iCloud Backup to save my data.",
+        "Disable the iCloud Backup feature.",
+        "Please switch on iCloud Backup."
+      ]
+    },
+    {
+      "description": "Toggle Find My iPhone.",
+      "prompts": [
+        "Enable Find My iPhone on my device.",
+        "Can you disable Find My iPhone?",
+        "Turn on the Find My iPhone feature.",
+        "Deactivate Find My iPhone for me.",
+        "Switch on Find My iPhone for safety."
+      ]
+    },
+    {
+      "description": "Set Ringtone. Parameter: Ringtone.",
+      "prompts": [
+        "Can you set a new ringtone for my phone?",
+        "Change my ringtone to something different.",
+        "I'd like to update my ringtone.",
+        "Please set this sound as my ringtone.",
+        "Switch my ringtone to a custom tone."
+      ]
+    },
+    {
+      "description": "Adjust Haptic Feedback. Parameter: Haptic level.",
+      "prompts": [
+        "Can you increase the haptic feedback?",
+        "Reduce the vibration feedback on my phone.",
+        "Adjust the haptic feedback to medium.",
+        "Please make the haptic feedback stronger.",
+        "Set the haptic feedback to the lowest setting."
+      ]
+    },
+    {
+      "description": "Toggle App Tracking Transparency.",
+      "prompts": [
+        "Enable app tracking transparency on my device.",
+        "Can you turn off app tracking?",
+        "Activate the app tracking transparency feature.",
+        "Disable tracking for all apps.",
+        "Switch on transparency for app tracking."
+      ]
+    },
+    {
+      "description": "Toggle Screen Recording.",
+      "prompts": [
+        "Please start screen recording.",
+        "Turn off screen recording for me.",
+        "Can you enable screen recording?",
+        "Stop the screen recording now.",
+        "Activate the screen recording feature."
+      ]
+    },
+    {
+      "description": "Set Language. Parameter: Language.",
+      "prompts": [
+        "Can you change my phone's language to Spanish?",
+        "Switch the language to French for me."
+      ]
+    },
+   {
+      "description": "Set Region. Parameter: Region.",
+      "prompts": [
+        "Set the region to United Kingdom.",
+        "Please change the region to Canada."
+      ]
+    },
+    {
+      "description": "Toggle Siri.",
+      "prompts": [
+        "Please enable Siri on my device.",
+        "Turn off Siri for me.",
+        "Activate Siri for voice commands.",
+        "Can you disable Siri?",
+        "Switch on Siri to assist me."
+      ]
+    },
+    {
+        "description": "Adjust Display Zoom. Parameter: Display zoom level.",
+        "prompts": [
+            "Can you increase the display zoom?",
+            "Reduce the zoom level on my screen.",
+            "Adjust the display zoom to medium.",
+            "Please make the display zoomed in more.",
+            "Set the display zoom to the default level."
+        ]
+    },
+    {
+    "description": "Toggle Emergency SOS.",
+    "prompts": [
+    "Please enable Emergency SOS on my phone.",
+    "Turn off the Emergency SOS feature.",
+    "Activate Emergency SOS for safety.",
+    "Can you disable Emergency SOS?",
+    "Switch on the Emergency SOS function."
+    ]
+    },
+    {
+    "description": "Set Face ID & Passcode. Parameter: Face ID and passcode setup.",
+    "prompts": [
+    "Can you help me set up Face ID?",
+    "Change my passcode and set up Face ID.",
+    "I’d like to update my Face ID settings.",
+    "Please set a new passcode with Face ID.",
+    "Configure Face ID for secure access."
+    ]
+    },
+    {
+    "description": "Toggle Call Waiting.",
+    "prompts": [
+    "Enable call waiting on my phone.",
+    "Turn off call waiting for me.",
+    "Activate call waiting for incoming calls.",
+    "Disable call waiting feature.",
+    "Switch on call waiting so I don’t miss calls."
+    ]
+    },
+    {
+    "description": "Toggle Software Update.",
+    "prompts": [
+    "Can you check for a software update?",
+    "Turn off automatic software updates.",
+    "Enable software update notifications.",
+    "Please update my device to the latest software.",
+    "Switch off the software update feature."
+    ]
+    },
+    {
+    "description": "Toggle Battery Percentage.",
+    "prompts": [
+    "Enable the battery percentage display.",
+    "Turn off battery percentage for me.",
+    "Activate the battery percentage indicator.",
+    "Disable the battery percentage display.",
+    "Show the battery percentage on my phone."
+    ]
+    },
+    {
+    "description": "Set VPN.",
+    "prompts": [
+    "Can you configure a VPN for my phone?",
+    "Set up a new VPN connection.",
+    "Update my VPN settings.",
+    "Please enable VPN with these details.",
+    "Switch to a different VPN provider."
+    ]
+    },
+    {
+    "description": "Toggle True Tone.",
+    "prompts": [
+    "Can you enable True Tone on my screen?",
+    "Turn off True Tone display.",
+    "Activate the True Tone feature.",
+    "Disable True Tone for my device.",
+    "Switch on True Tone for better color accuracy."
+    ]
+    },
+    {
+    "description": "Toggle Low Power Mode.",
+    "prompts": [
+    "Please enable Low Power Mode.",
+    "Turn off Low Power Mode for me.",
+    "Activate Low Power Mode to save battery.",
+    "Disable the Low Power Mode feature.",
+    "Switch on Low Power Mode for longer battery life."
+    ]
+    },
+    {
+    "description": "Toggle App Store Automatic Downloads.",
+    "prompts": [
+    "Enable automatic downloads for apps.",
+    "Turn off automatic downloads from the App Store.",
+    "Activate auto-downloads for new purchases.",
+    "Disable automatic app updates.",
+    "Switch on automatic downloads for apps."
+    ]
+    },
+    {
+    "description": "Toggle App Privacy.",
+    "prompts": [
+    "Can you toggle my app privacy settings?",
+    "Change the privacy settings for all apps.",
+    "Adjust the privacy settings for better security.",
+    "Please enable stricter privacy controls.",
+    "Set the app privacy to the highest level."
+    ]
+    },
+    {
+    "description": "Toggle Share My Location.",
+    "prompts": [
+    "Please enable Share My Location.",
+    "Turn off Share My Location for me.",
+    "Activate location sharing with my contacts.",
+    "Disable the Share My Location feature.",
+    "Switch on location sharing for safety."
+    ]
+    },
+    {
+    "description": "Toggle Handoff.",
+    "prompts": [
+    "Please enable Handoff on my device.",
+    "Turn off the Handoff feature for me.",
+    "Activate Handoff to switch between devices.",
+    "Disable the Handoff function.",
+    "Switch on Handoff for seamless transitions."
+    ]
+    },
+    {
+    "description": "Set Screen Time Limit. Parameter: Screen time limit.",
+    "prompts": [
+    "Can you set up screen time limits?",
+    "Change the screen time settings for me.",
+    "Update my screen time preferences.",
+    "Please set a daily screen time limit.",
+    "Adjust the screen time settings for better management."
+    ]
+    },
+    {
+    "description": "Toggle Call Forwarding.",
+    "prompts": [
+    "Please enable call forwarding.",
+    "Turn off call forwarding for me.",
+    "Activate call forwarding to another number.",
+    "Disable the call forwarding feature.",
+    "Switch on call forwarding for my phone."
+    ]
+    },
+    {
+    "description": "Toggle Background App Refresh.",
+    "prompts": [
+    "Please enable background app refresh.",
+    "Turn off background refresh for apps.",
+    "Activate app refresh in the background.",
+    "Disable the background app refresh feature.",
+    "Switch on background refresh for all apps."
+    ]
+    },
+    {
+    "description": "Show Battery Health.",
+    "prompts": [
+    "Can you check my battery health?",
+    "Update the battery health settings.",
+    "Monitor the battery health status for me.",
+    "Please optimize the battery health.",
+    "Set the battery health settings to extend battery life."
+    ]
+    },
+    {
+    "description": "Toggle VPN.",
+    "prompts": [
+    "Please enable VPN on my phone.",
+    "Turn off the VPN connection for me.",
+    "Activate the VPN for secure browsing.",
+    "Disable the VPN feature.",
+    "Switch on the VPN for private internet access."
+    ]
+    },
+    {
+    "description": "Set Wallet & Apple Pay. Parameter: Wallet and Apple Pay settings.",
+    "prompts": [
+    "Can you set up Wallet and Apple Pay?",
+    "Update my Apple Pay settings.",
+    "Add a new card to Wallet for Apple Pay.",
+    "Please configure my Apple Pay preferences.",
+    "Set the Wallet and Apple Pay for easy payments."
+    ]
+    },
+    {
+    "description": "Toggle Software Update Notifications.",
+    "prompts": [
+    "Please enable software update notifications.",
+    "Turn off the update notifications for me.",
+    "Activate notifications for software updates.",
+    "Disable the update notifications feature.",
+    "Switch on notifications for the latest updates."
+    ]
+    },
+    {
+    "description": "Toggle Spotlight Suggestions.",
+    "prompts": [
+    "Please enable Spotlight suggestions.",
+    "Turn off the Spotlight suggestions for me.",
+    "Activate the Spotlight feature for better search.",
+    "Disable Spotlight suggestions.",
+    "Switch on suggestions in Spotlight for quick access."
+    ]
+    },
+    {
+    "description": "Toggle iMessage.",
+    "prompts": [
+    "Please enable iMessage on my phone.",
+    "Turn off the iMessage feature for me.",
+    "Activate iMessage for better messaging.",
+    "Disable the iMessage on my device.",
+    "Switch on iMessage for easy communication."
+    ]
+    },
+    {
+    "description": "Set Mail Account. Parameter: Mail account setup.",
+    "prompts": [
+    "Can you set up a new mail account for me?",
+    "Change the settings for my email account.",
+    "Add another email account to my phone.",
+    "Please configure my mail account preferences.",
+    "Set up an email account for easy access."
+    ]
+    },
+    {
+    "description": "Adjust Safari Settings. Parameter: Safari settings adjustment.",
+    "prompts": [
+    "Can you update my Safari settings?",
+    "Change the settings for better browsing.",
+    "Adjust the Safari preferences to my liking.",
+    "Please customize the Safari settings.",
+    "Set the Safari settings for better privacy."
+    ]
+    },
+    {
+    "description": "Toggle App Store Updates.",
+    "prompts": [
+    "Please enable automatic App Store updates.",
+    "Turn off the automatic updates for me.",
+    "Activate updates for the App Store apps.",
+    "Disable the automatic App Store updates.",
+    "Switch on automatic updates for new apps."
+    ]
+    },
+    {
+    "description": "Toggle Notifications.",
+    "prompts": [
+    "Please enable notifications on my phone.",
+    "Turn off notifications for me.",
+    "Activate notifications for important apps.",
+    "Disable the notifications for a while.",
+    "Switch on notifications for better updates."
+    ]
+    },
+    {
+    "description": "Set Family Sharing.",
+    "prompts": [
+    "Can you set up Family Sharing for me?",
+    "Update the settings for Family Sharing.",
+    "Enable Family Sharing on my device.",
+    "Please configure Family Sharing preferences.",
+    "Set Family Sharing to share with my family."
+    ]
+    },
+    {
+    "description": "Show Camera Settings.",
+    "prompts": [
+    "Can you update my camera settings?",
+    "Change the settings for better photos.",
+    "Adjust the camera preferences to my liking.",
+    "Please customize the camera settings.",
+    "Set the camera settings for high resolution."
+    ]
+    },
+    {
+    "description": "Toggle Wi-Fi Calling.",
+    "prompts": [
+    "Please enable Wi-Fi calling on my phone.",
+    "Turn off Wi-Fi calling for me.",
+    "Activate Wi-Fi calling for better call quality.",
+    "Disable the Wi-Fi calling feature.",
+    "Switch on Wi-Fi calling for better connectivity."
+    ]
+    }
+]

@@ -1,0 +1,402 @@
+[
+    {
+      "description": "Add event. Parameters: Event title, date, time, location.",
+      "prompts": [
+        "Add a new event called 'Meeting' on May 25th at 10:00 AM at the office.",
+        "Create an event titled 'Lunch with Sarah' on June 10th at 12:30 PM at the restaurant.",
+        "Can you add an event named 'Conference Call' on July 15th at 3:00 PM in the conference room?",
+        "Schedule a meeting for tomorrow at 9:00 AM titled 'Project Review' in the boardroom.",
+        "Please add an event for Friday evening called 'Dinner with Family' at 7:00 PM at home."
+      ]
+    },
+    {
+      "description": "Edit event. Parameters: Event title.",
+      "prompts": [
+        "Modify the details of the 'Team Meeting' event scheduled for next Monday.",
+        "Update the time of the 'Training Session' event to 4:00 PM.",
+        "Can you change the location of the 'Birthday Party' event to the park?",
+        "Edit the date of the 'Doctor Appointment' event to August 20th.",
+        "Please modify the title of the event on September 5th to 'Product Launch'."
+      ]
+    },
+    {
+      "description": "Delete event. Parameter: Event title.",
+      "prompts": [
+        "Delete the 'Dentist Appointment' event from my calendar.",
+        "Remove the 'Conference' event scheduled for next Wednesday.",
+        "Can you cancel the 'Networking Event' on July 30th?",
+        "Delete the meeting scheduled for tomorrow morning.",
+        "Please remove the 'Gym Session' event from my calendar."
+      ]
+    },
+    {
+      "description": "View day.",
+      "prompts": [
+        "Show me my schedule for today.",
+        "What events do I have planned for tomorrow?",
+        "Can you display my schedule for Monday?",
+        "Show me what's on my calendar for Friday.",
+        "View my events for this weekend."
+      ]
+    },
+    {
+      "description": "View week.",
+      "prompts": [
+        "Show me my weekly calendar.",
+        "What's on my schedule for next week?",
+        "Display my events for the week starting on June 1st.",
+        "View my appointments for the current week.",
+        "Show me the events planned for the upcoming week."
+      ]
+    },
+    {
+      "description": "View month.",
+      "prompts": [
+        "Display my calendar for May.",
+        "What events do I have in June?",
+        "Show me my schedule for August.",
+        "View my appointments for September.",
+        "Display the events for October."
+      ]
+    },
+    {
+      "description": "View year.",
+      "prompts": [
+        "Show me my calendar for 2024.",
+        "What events do I have planned for next year?",
+        "Display my schedule for 2025.",
+        "View my appointments for the year 2026.",
+        "Show me the events for 2027."
+      ]
+    },
+    {
+      "description": "View agenda.",
+      "prompts": [
+        "Show me my agenda for today.",
+        "What's on my agenda for tomorrow?",
+        "Display my agenda for next Monday.",
+        "View my agenda for Friday.",
+        "Show me my agenda for the week."
+      ]
+    },
+    {
+      "description": "Search events. Parameter: Search query.",
+      "prompts": [
+        "Search for events related to 'project meeting'.",
+        "Find all events with 'birthday' in the title.",
+        "Search for 'doctor appointment' events.",
+        "Find events related to 'conference'.",
+        "Search for all events with 'family' in the title."
+      ]
+    },
+    {
+      "description": "Share event. Parameter: Event title.",
+      "prompts": [
+        "Share the details of the 'Team Lunch' event with Sarah.",
+        "Send the information about the 'Training Workshop' event to John.",
+        "Share the agenda of the 'Product Launch' event with the team.",
+        "Can you send the details of the 'Client Meeting' event to my manager?",
+        "Share the schedule of the 'Company Picnic' event with everyone in the team."
+      ]
+    },
+    {
+      "description": "Set reminder. Parameters: Event title, reminder time.",
+      "prompts": [
+        "Remind me about the 'Doctor Appointment' event tomorrow at 10:00 AM.",
+        "Set a reminder for the 'Team Meeting' event on Friday at 3:00 PM.",
+        "Remind me about the 'Dentist Visit' event on Monday at 9:00 AM.",
+        "Can you set a reminder for the 'Project Deadline' event next week?",
+        "Remind me about the 'Conference Call' event in 30 minutes."
+      ]
+    },
+    {
+      "description": "Repeat event. Parameters: Event title, recurrence.",
+      "prompts": [
+        "Make the 'Weekly Review' event repeat every Monday.",
+        "Set the 'Gym Session' event to repeat every weekday.",
+        "Make the 'Team Standup' event repeat every day.",
+        "Set the 'Client Meeting' event to repeat every two weeks.",
+        "Make the 'Monthly Report' event repeat every month on the 1st."
+      ]
+    },
+    {
+      "description": "Add contacts to event. Parameters: Event title, contact list.",
+      "prompts": [
+        "Invite Sarah, John, and Emily to the 'Team Lunch' event.",
+        "Send invitations to the 'Product Demo' event to all team members.",
+        "Invite clients to the 'Networking Event' next week.",
+        "Can you invite Mark and Lisa to the 'Project Kickoff' meeting?",
+        "Send out invitations for the 'Company Party' event to all employees."
+      ]
+    },
+    {
+      "description": "Set event priority. Parameters: Event title, priority level.",
+      "prompts": [
+        "Set the priority of the 'Project Meeting' event to high.",
+        "Mark the 'Team Offsite' event as low priority.",
+        "Set the priority of the 'Deadline Reminder' event to medium.",
+        "Priority of the 'Client Presentation' event should be high.",
+        "Mark the 'Training Session' event as low priority."
+      ]
+    },
+    {
+      "description": "Add note to event. Parameters: Event title, note text.",
+      "prompts": [
+        "Add a note 'Bring presentation slides' to the 'Client Meeting' event.",
+        "Include the note 'Prepare agenda' for the 'Team Discussion' event.",
+        "Add a note 'Bring laptop' to the 'Conference Call' event.",
+        "Note: 'Review project proposal' for the 'Business Review' event.",
+        "Add the note 'Wear formal attire' to the 'Company Dinner' event."
+      ]
+    },
+    {
+      "description": "Set event color. Parameters: Event title, color choice.",
+      "prompts": [
+        "Change the color of the 'Team Meeting' event to blue.",
+        "Set the color of the 'Training Session' event to green.",
+        "Make the color of the 'Client Presentation' event red.",
+        "Change the color of the 'Product Launch' event to yellow.",
+        "Set the color of the 'Company Retreat' event to purple."
+      ]
+    },
+    {
+      "description": "Set event duration. Parameters: Event title, duration.",
+      "prompts": [
+        "Extend the duration of the 'Training Workshop' event by 1 hour.",
+        "Shorten the duration of the 'Project Review' event to 30 minutes.",
+        "Make the 'Team Building' event last for 3 hours.",
+        "Set the duration of the 'Client Meeting' event to 2 hours.",
+        "Shorten the duration of the 'Conference Call' event by 15 minutes."
+      ]
+    },
+    {
+      "description": "Mark event as completed. Parameter: Event title.",
+      "prompts": [
+        "Mark the 'Training Session' event as completed.",
+        "Complete the 'Team Building' event.",
+        "Mark the 'Product Demo' event as done.",
+        "Complete the 'Project Review' event.",
+        "Mark the 'Client Meeting' event as finished."
+      ]
+    },
+    {
+      "description": "Copy event. Parameter: Event title.",
+      "prompts": [
+        "Copy the 'Team Meeting' event.",
+        "Duplicate the 'Project Kickoff' meeting.",
+        "Copy the 'Client Presentation' event.",
+        "Duplicate the 'Training Workshop' event.",
+        "Copy the 'Product Demo' event."
+      ]
+    },
+    {
+      "description": "Create new calendar. Parameter: Calendar name.",
+      "prompts": [
+        "Create a calendar named 'Work'.",
+        "Add a new calendar called 'Personal'.",
+        "Create calendar 'Fitness'.",
+        "Make a calendar named 'Family'.",
+        "Create 'Travel' calendar."
+      ]
+    },
+    {
+      "description": "Delete calendar. Parameter: Calendar name.",
+      "prompts": [
+        "Delete the 'Work' calendar.",
+        "Remove the 'Personal' calendar.",
+        "Delete 'Fitness' calendar.",
+        "Remove the 'Family' calendar.",
+        "Delete 'Travel' calendar."
+      ]
+    },
+    {
+      "description": "Toggle calendar visibility. Parameter: Calendar name.",
+      "prompts": [
+        "Hide the 'Work' calendar.",
+        "Toggle visibility for the 'Personal' calendar.",
+        "Show 'Fitness' calendar.",
+        "Toggle visibility of the 'Family' calendar.",
+        "Hide 'Travel' calendar."
+      ]
+    },
+    {
+      "description": "Share calendar. Parameters: Calendar name, contact.",
+      "prompts": [
+        "Share the 'Work' calendar with Sarah.",
+        "Send the 'Personal' calendar to John.",
+        "Share 'Fitness' calendar with Emily.",
+        "Invite Mark to view the 'Family' calendar.",
+        "Share the 'Travel' calendar with Lisa."
+      ]
+    },
+    {
+      "description": "Unsubscribe from calendar. Parameter: Calendar name.",
+      "prompts": [
+        "Unsubscribe from the 'Work' calendar.",
+        "Remove subscription to the 'Personal' calendar.",
+        "Unsubscribe from 'Fitness' calendar.",
+        "Remove 'Family' calendar subscription.",
+        "Unsubscribe from 'Travel' calendar."
+      ]
+    },
+    {
+      "description": "Set time zone. Parameter: Time zone selection.",
+      "prompts": [
+        "Change time zone to Eastern Standard Time.",
+        "Set time zone to Pacific Time.",
+        "Update time zone to Central European Time.",
+        "Change time zone to Australian Eastern Standard Time.",
+        "Set time zone to Indian Standard Time."
+      ]
+    },
+    {
+      "description": "View weather forecast. Parameter: Time.",
+      "prompts": [
+        "Check weather forecast for tomorrow.",
+        "View upcoming weather forecast.",
+        "Show weather forecast for the week.",
+        "Display weather forecast for next weekend.",
+        "Check weather outlook for the month."
+      ]
+    },
+    {
+      "description": "Set event alert. Parameters: Event title, alert time.",
+      "prompts": [
+        "Set a 15-minute alert for the 'Team Meeting' event.",
+        "Create a 30-minute alert for 'Project Kickoff' meeting.",
+        "Set an hour reminder for 'Client Presentation' event.",
+        "Create a 10-minute alert for 'Training Workshop' event.",
+        "Set a 20-minute reminder for 'Product Demo' event."
+      ]
+    },
+    {
+      "description": "Add attachment to event. Parameters: Event title, attachment file.",
+      "prompts": [
+        "Attach agenda document to the 'Team Meeting' event.",
+        "Include presentation slides for 'Project Kickoff' meeting.",
+        "Attach handouts to 'Client Presentation' event.",
+        "Add training materials to 'Training Workshop' event.",
+        "Include product brochure in 'Product Demo' event."
+      ]
+    },
+    {
+      "description": "Add task to event. Parameters: Event title, task details.",
+      "prompts": [
+        "Add 'Prepare Presentation' task to the 'Team Meeting' event.",
+        "Include 'Send Invitations' task for 'Project Kickoff' meeting.",
+        "Add 'Finalize Report' task to 'Client Presentation' event.",
+        "Include 'Setup Equipment 'task for 'Training Workshop' event.",
+        "Add 'Arrange Demo Setup' task to 'Product Demo' event."
+      ]
+    },
+    {
+      "description": "View task list. Parameters: Event title.",
+      "prompts": [
+        "Show tasks associated with the 'Team Meeting' event.",
+        "View task list for 'Project Kickoff' meeting.",
+        "Display tasks for 'Client Presentation' event.",
+        "Show task list for 'Training Workshop' event.",
+        "View tasks associated with 'Product Demo' event."
+      ]
+    },
+    {
+      "description": "Delete task. Parameter: Task title.",
+      "prompts": [
+        "Remove 'Prepare Presentation' task from the list.",
+        "Delete 'Send Invitations' task for 'Project Kickoff' meeting.",
+        "Remove 'Finalize Report' task from the list.",
+        "Delete 'Setup Equipment' task for 'Training Workshop' event.",
+        "Remove 'Arrange Demo Setup' task from the list."
+      ]
+    },
+    {
+      "description": "Mark task as completed. Parameter: Task title.",
+      "prompts": [
+        "Mark 'Prepare Presentation' task as completed.",
+        "Complete 'Send Invitations' task for 'Project Kickoff' meeting.",
+        "Mark 'Finalize Report' task as done.",
+        "Complete 'Setup Equipment' task for 'Training Workshop' event.",
+        "Mark 'Arrange Demo Setup' task as completed."
+      ]
+    },
+    {
+      "description": "Set task due date. Parameters: Task title, due date.",
+      "prompts": [
+        "Set due date for 'Prepare Presentation' task to tomorrow.",
+        "Assign due date for 'Send Invitations' task for next week.",
+        "Set due date for 'Finalize Report' task to end of the month.",
+        "Assign due date for 'Setup Equipment' task for next Wednesday.",
+        "Set due date for 'Arrange Demo Setup' task to Friday."
+      ]
+    },
+    {
+      "description": "Set task priority. Parameters: Task title, priority level.",
+      "prompts": [
+        "Set priority for 'Prepare Presentation' task to high.",
+        "Assign priority level to 'Send Invitations' task for 'Project Kickoff' meeting.",
+        "Set priority for 'Finalize Report' task to low.",
+        "Assign priority level to 'Setup Equipment' task for 'Training Workshop' event.",
+        "Set priority for 'Arrange Demo Setup' task to medium."
+      ]
+    },
+    {
+      "description": "View task details. Parameter: Task title.",
+      "prompts": [
+        "Show details of 'Prepare Presentation' task.",
+        "View details of 'Send Invitations' task for 'Project Kickoff' meeting.",
+        "Display details of 'Finalize Report' task.",
+        "Show details of 'Setup Equipment' task for 'Training Workshop' event.",
+        "View details of 'Arrange Demo Setup' task."
+      ]
+    },
+    {
+      "description": "Add subtask. Parameters: Task title, subtask title.",
+      "prompts": [
+        "Add 'Create Slides' subtask to 'Prepare Presentation' task.",
+        "Include 'Send Emails' subtask for 'Send Invitations' task.",
+        "Add 'Gather Data' subtask to 'Finalize Report' task.",
+        "Include 'Check Equipment' subtask for 'Setup Equipment' task.",
+        "Add 'Test Software' subtask to 'Arrange Demo Setup' task."
+      ]
+    },
+    {
+      "description": "Delete subtask. Parameters: Task title, subtask title.",
+      "prompts": [
+        "Remove 'Create Slides' subtask from the list.",
+        "Delete 'Send Emails' subtask for 'Send Invitations' task.",
+        "Remove 'Gather Data' subtask from the list.",
+        "Delete 'Check Equipment' subtask for 'Setup Equipment' task.",
+        "Remove 'Test Software' subtask from the list."
+      ]
+    },
+    {
+      "description": "Mark subtask as completed. Parameters: Task title, subtask title.",
+      "prompts": [
+        "Mark 'Create Slides' subtask as completed.",
+        "Complete 'Send Emails' subtask for 'Send Invitations' task.",
+        "Mark 'Gather Data' subtask as done.",
+        "Complete 'Check Equipment' subtask for 'Setup Equipment' task.",
+        "Mark 'Test Software' subtask as completed."
+      ]
+    },
+    {
+      "description": "Set subtask due date. Parameters: Task title, subtask title.",
+      "prompts": [
+        "Set due date for 'Create Slides' subtask to tomorrow.",
+        "Assign due date for 'Send Emails' subtask for next week.",
+        "Set due date for 'Gather Data' subtask to end of the month.",
+        "Assign due date for 'Check Equipment' subtask for next Wednesday.",
+        "Set due date for 'Test Software' subtask to Friday."
+      ]
+    },
+    {
+      "description": "View subtask details. Parameters: Task title, subtask title.",
+      "prompts": [
+        "Show details of 'Create Slides' subtask.",
+        "View details of 'Send Emails' subtask for 'Send Invitations' task.",
+        "Display details of 'Gather Data' subtask.",
+        "Show details of 'Check Equipment' subtask for 'Setup Equipment' task.",
+        "View details of 'Test Software' subtask."
+      ]
+    }
+  ]

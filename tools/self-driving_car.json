@@ -1,0 +1,611 @@
+[
+{
+  "description": "Adjust car speed. Parameter: Desired speed.",
+  "prompts": [
+    "Let's go a little faster.",
+    "Slow down the car a bit, please.",
+    "Maintain the speed of 65 mph.",
+    "I'd like to go 55 mph.",
+    "Keep the speed at 70 mph."
+  ]
+},
+{
+  "description": "Initiate autonomous parking. Parameter: Parking spot coordinates.",
+  "prompts": [
+    "Find a parking spot near the entrance.",
+    "Park me in that open space over there.",
+    "Park right next to that red car.",
+    "I'd like to park in the lot behind the building."
+  ]
+},
+{
+  "description": "Set navigation destination. Parameter: Destination coordinates.",
+  "prompts": [
+    "Take me to the library downtown.",
+    "Navigate to the airport, please.",
+    "I need to go to the grocery store on Main Street.",
+    "Can you get me to the park?",
+    "Let's go to the restaurant on 5th Avenue."
+  ]
+},
+{
+  "description": "Summon car to location. Parameter: Target location coordinates.",
+  "prompts": [
+    "Come pick me up at the front door.",
+    "Bring the car to the corner of Elm and Oak.",
+    "I need the car at the parking garage entrance.",
+    "Summon the vehicle to my current location.",
+    "Can you meet me at the cafe across the street?"
+  ]
+},
+{
+  "description": "Check tire pressure. Parameter: Tire pressure.",
+  "prompts": [
+    "What's the tire pressure?",
+    "Check the tire pressure, please.",
+    "Are the tires inflated correctly?",
+    "Give me a reading of the tire pressure.",
+    "How are the tires doing?"
+  ]
+},
+{
+  "description": "Open windows.",
+  "prompts": [
+    "Open the windows.",
+    "Roll up the front passenger window.",
+    "I need some fresh air, open the windows."
+  ]
+},
+{
+  "description": "Close windows.",
+  "prompts": [
+    "Close the windows, please.",
+    "Roll down the front passenger window.",
+    "Can you close all the windows?"
+  ]
+},
+{
+  "description": "Toggle doors lock.",
+  "prompts": [
+    "Lock the doors.",
+    "Unlock the doors, please.",
+    "Make sure the doors are locked.",
+    "Can you unlock the driver's side door?",
+    "I need the doors unlocked."
+  ]
+},
+{
+  "description": "Adjust temperature settings. Parameter: Desired temperature.",
+  "prompts": [
+    "Make it warmer in here.",
+    "Set the temperature to 72 degrees.",
+    "I'm cold, can you raise the temperature?",
+    "Cool down the car to 68 degrees.",
+    "Make it a little cooler, please."
+  ]
+},
+{
+  "description": "Activate windshield wipers.",
+  "prompts": [
+    "Turn on the wipers.",
+    "Switch off the wipers, please.",
+    "I need the wipers on high speed.",
+    "Can you turn on the wipers at low speed?"
+  ]
+},
+{
+  "description": "Toggle headlights.",
+  "prompts": [
+    "Turn on the headlights.",
+    "Switch off the headlights, please.",
+    "Can you turn on the fog lights?",
+    "Turn on the parking lights.",
+    "I need the headlights on high beam."
+  ]
+},
+{
+  "description": "Activate hazard lights.",
+  "prompts": [
+    "Turn on the hazards.",
+    "Switch off the hazard lights, please.",
+    "I need the hazards on.",
+    "Can you activate the hazard lights?",
+    "Turn the hazards off."
+  ]
+},
+{
+  "description": "Switch drive modes. Parameter: Drive mode.",
+  "prompts": [
+    "Change to Sport mode.",
+    "Put it in Eco mode, please.",
+    "I need to go into Comfort mode.",
+    "Switch to Normal mode.",
+    "Engage the off-road drive mode."
+  ]
+},
+{
+  "description": "Initiate remote start.",
+  "prompts": [
+    "Start the car remotely.",
+    "Can you warm up the engine?",
+    "Remotely start the vehicle, please.",
+    "Start the car for me.",
+    "I need the car to be running."
+  ]
+},
+{
+  "description": "Toggle seat heaters. Parameter: Temperature.",
+  "prompts": [
+    "Turn on the seat heaters.",
+    "Switch off the seat heaters, please.",
+    "I need the seat heaters on high.",
+    "Can you turn on the seat heaters to low?",
+    "Turn the seat heaters off."
+  ]
+},
+{
+  "description": "Set interior lighting. Parameter: Lighting color.",
+  "prompts": [
+    "Make the interior lights blue.",
+    "Set the ambient lighting to red, please.",
+    "Can you change the interior lights to green?",
+    "I need the lights to be purple.",
+    "Set the ambient lighting to a warm white color."
+  ]
+},
+{
+  "description": "Open trunk.",
+  "prompts": [
+    "Open the trunk.",
+    "Can you pop the trunk?",
+    "I need to access the trunk."
+  ]
+},
+{
+  "description": "Close trunk.",
+  "prompts": [
+    "Close the trunk, please.",
+    "Close the trunk for me."
+  ]
+},
+{
+  "description": "Set audio volume. Parameter: Volume level.",
+  "prompts": [
+    "Make it louder.",
+    "Turn the volume down.",
+    "Set the volume to 5.",
+    "Can you lower the volume a bit?",
+    "I need the volume at 10."
+  ]
+},
+{
+  "description": "Change radio station. Parameter: Radio station.",
+  "prompts": [
+    "Switch to 98.7 FM.",
+    "Can you play 103.5?",
+    "Change the station to classic rock.",
+    "I'd like to listen to jazz.",
+    "Tune in to the news station."
+  ]
+},
+{
+  "description": "Make phone calls. Parameter: Contact or number.",
+  "prompts": [
+    "Call my wife.",
+    "Can you dial John's number?",
+    "Make a call to 555-123-4567.",
+    "Call my home phone.",
+    "I need to talk to Sarah."
+  ]
+},
+{
+  "description": "Toggle parking sensors.",
+  "prompts": [
+    "Turn on the parking sensors.",
+    "Switch off the parking sensors, please.",
+    "Can you activate the parking sensors?",
+    "I need the parking sensors on.",
+    "Deactivate the parking sensors."
+  ]
+},
+{
+  "description": "Adjust headlight brightness. Parameter: Brightness level.",
+  "prompts": [
+    "Make the headlights brighter.",
+    "Dim the headlights, please.",
+    "Set the headlights to low beam.",
+    "Can you adjust the headlights to high beam?",
+    "I need the headlights at maximum brightness."
+  ]
+},
+{
+  "description": "Activate adaptive cruise control.",
+  "prompts": [
+    "Engage adaptive cruise control.",
+    "Can you turn on adaptive cruise control?",
+    "Activate the adaptive cruise control system.",
+    "I'd like to use adaptive cruise control.",
+    "Turn on the adaptive cruise control."
+  ]
+},
+{
+  "description": "Initiate emergency braking.",
+  "prompts": [
+    "Emergency brake!",
+    "Apply emergency braking, please.",
+    "Activate emergency braking.",
+    "I need to stop immediately!",
+    "Engage emergency braking."
+  ]
+},
+{
+  "description": "Set driver seat position. Parameter: Seat position.",
+  "prompts": [
+    "Move the seat back a bit.",
+    "Can you adjust the seat to a higher position?",
+    "I need the seat lower.",
+    "Make the seat more comfortable.",
+    "Adjust the seat to my preference."
+  ]
+},
+{
+  "description": "Initiate voice command system.",
+  "prompts": [
+    "Activate voice control.",
+    "Can you listen to my commands?",
+    "Start listening.",
+    "Engage voice control.",
+    "I'm ready to give commands."
+  ]
+},
+{
+  "description": "Adjust screen brightness. Parameter: Set screen brightness level.",
+  "prompts": [
+    "Make the screen brighter.",
+    "Dim the screen, please.",
+    "Set the screen brightness to 50%.",
+    "Can you reduce the screen brightness?",
+    "I need the screen at 75% brightness."
+  ]
+},
+{
+  "description": "Set following distance. Parameter: Distance.",
+  "prompts": [
+    "Keep a closer following distance.",
+    "Increase the following distance, please.",
+    "Set the following distance to 2 car lengths.",
+    "Can you adjust the following distance to 3 car lengths?",
+    "I need the car to keep a safe following distance."
+  ]
+},
+{
+  "description": "Toggle auto-pilot mode.",
+  "prompts": [
+    "Turn on autopilot.",
+    "Switch off autopilot, please.",
+    "Can you activate autopilot?",
+    "I need autopilot on.",
+    "Deactivate autopilot."
+  ]
+},
+{
+  "description": "Set speed limit. Parameter: Speed.",
+  "prompts": [
+    "Set the speed limit to 65 mph.",
+    "Maintain a speed limit of 70 mph.",
+    "Can you set the speed limit to 55?",
+    "I need to limit the speed to 60 mph.",
+    "Set the speed limit to 70."
+  ]
+},
+{
+  "description": "Toggle entertainment system.",
+  "prompts": [
+    "Play a movie in the back.",
+    "Can you adjust the volume on the rear entertainment system?",
+    "Change the channel on the rear screens.",
+    "I need to turn off the rear entertainment system.",
+    "Can you show a cartoon on the rear screens?"
+  ]
+},
+{
+  "description": "Set energy regeneration level. Parameter: Regeneration level.",
+  "prompts": [
+    "Increase the energy regeneration.",
+    "Reduce the energy regeneration level, please.",
+    "Set the energy regeneration to medium.",
+    "Can you adjust the energy regeneration to high?",
+    "I need the energy regeneration at low level."
+  ]
+},
+{
+  "description": "Adjust steering sensitivity. Parameter: Steering sensitivity.",
+  "prompts": [
+    "Make the steering more responsive.",
+    "Reduce the steering sensitivity, please.",
+    "Set the steering sensitivity to medium.",
+    "Can you adjust the steering sensitivity to high?",
+    "I need the steering sensitivity at low level."
+  ]
+},
+{
+  "description": "Toggle ambient noise cancellation.",
+  "prompts": [
+    "Turn on noise cancellation.",
+    "Switch off noise cancellation, please.",
+    "Can you activate noise cancellation?",
+    "I need the noise cancellation on.",
+    "Deactivate noise cancellation."
+  ]
+},
+{
+  "description": "Toggle blind-spot monitoring.",
+  "prompts": [
+    "Turn on blind-spot monitoring.",
+    "Switch off blind-spot monitoring, please.",
+    "Can you activate blind-spot monitoring?",
+    "I need the blind-spot monitoring on.",
+    "Deactivate blind-spot monitoring."
+  ]
+},
+{
+  "description": "Adjust ride height. Parameter: Ride height.",
+  "prompts": [
+    "Lower the car.",
+    "Raise the car, please.",
+    "Adjust the ride height to normal.",
+    "Can you raise the ride height?",
+    "I need the car to be lower."
+  ]
+},
+{
+  "description": "Toggle lane departure warning.",
+  "prompts": [
+    "Turn on lane departure warning.",
+    "Switch off lane departure warning, please.",
+    "Can you activate lane departure warning?",
+    "I need the lane departure warning on.",
+    "Deactivate lane departure warning."
+  ]
+},
+{
+  "description": "Set maximum acceleration limit. Parameter: Speed",
+  "prompts": [
+    "Limit the acceleration to 80%.",
+    "Reduce the maximum acceleration, please.",
+    "Set the maximum acceleration to 50%.",
+    "Can you adjust the maximum acceleration to 70%?",
+    "I need to limit the acceleration to 60%."
+  ]
+},
+{
+  "description": "Toggle driver attention monitoring.",
+  "prompts": [
+    "Turn on driver attention monitoring.",
+    "Switch off driver attention monitoring, please.",
+    "Can you activate driver attention monitoring?",
+    "I need the driver attention monitoring on.",
+    "Deactivate driver attention monitoring."
+  ]
+},
+{
+  "description": "Turn on and off auto hold feature. Parameter: Toggle auto hold feature.",
+  "prompts": [
+    "Turn on auto hold.",
+    "Switch off auto hold, please.",
+    "Can you activate auto hold?",
+    "I need the auto hold on.",
+    "Deactivate auto hold."
+  ]
+},
+{
+  "description": "Set maximum speed limit. Parameter: Specify maximum speed limit.",
+  "prompts": [
+    "Set the maximum speed limit to 65 mph.",
+    "Maintain a maximum speed limit of 70 mph.",
+    "Can you set the maximum speed limit to 55?",
+    "I need to limit the speed to 60 mph.",
+    "Set the maximum speed limit to 70."
+  ]
+},
+{
+  "description": "Open panoramic roof.",
+  "prompts": [
+    "Open the sunroof.",
+    "Can you open the panoramic roof?",
+    "I need some fresh air, open the roof."
+  ]
+},
+{
+  "description": "Close panoramic roof.",
+  "prompts": [
+    "Close the sunroof, please.",
+    "Close the panoramic roof."
+  ]
+},
+{
+  "description": "Enable auto lane centering.",
+  "prompts": [
+    "Engage auto lane centering.",
+    "Can you turn on auto lane centering?",
+    "Activate the auto lane centering system.",
+    "I'd like to use auto lane centering.",
+    "Turn on the auto lane centering."
+  ]
+},
+{
+  "description": "Adjust steering wheel feedback. Parameter: Wheel feedback.",
+  "prompts": [
+    "Make the steering wheel more responsive.",
+    "Reduce the steering wheel feedback, please.",
+    "Set the steering wheel feedback to medium.",
+    "Can you adjust the steering wheel feedback to high?",
+    "I need the steering wheel feedback at low level."
+  ]
+},
+{
+  "description": "Set charging schedule. Parameter: Сharging schedule.",
+  "prompts": [
+    "Charge the car overnight.",
+    "Set the charging schedule to start at 10 pm, please.",
+    "Can you schedule the charging to finish by 6 am?",
+    "I need to charge the car between 9 pm and 5 am.",
+    "Set a charging schedule for tomorrow."
+  ]
+},
+{
+  "description": "Toggle air purification.",
+  "prompts": [
+    "Turn on the air purifier.",
+    "Switch off the air purifier, please.",
+    "Can you activate the air purification system?",
+    "I need the air purifier on.",
+    "Deactivate the air purifier."
+  ]
+},
+{
+  "description": "Adjust cooling. Parameter: Cooling intensity.",
+  "prompts": [
+    "Make the seat cooling stronger.",
+    "Reduce the seat cooling intensity, please.",
+    "Set the seat cooling to medium intensity.",
+    "Can you adjust the seat cooling to high intensity?",
+    "I need the seat cooling at low intensity."
+  ]
+},
+{
+  "description": "Adjust cabin humidity. Parameter: Humidity level.",
+  "prompts": [
+    "Make the air a little more humid.",
+    "Can you dry out the air in here?",
+    "Adjust the humidity to 50%.",
+    "I need the cabin air to be more humid.",
+    "Reduce the humidity level."
+  ]
+},
+{
+  "description": "Adjust seat lumbar support. Parameter: Lumbar support level.",
+  "prompts": [
+    "Increase the lumbar support.",
+    "Reduce the lumbar support, please.",
+    "Set the lumbar support to medium.",
+    "Can you adjust the lumbar support to high?",
+    "I need the lumbar support at low level."
+  ]
+},
+{
+  "description": "Play music. Parameter: Search query.",
+  "prompts": [
+    "Play some jazz music.",
+    "Play the Beatles.",
+    "I'd like to hear 'Bohemian Rhapsody.'",
+    "Put on some relaxing music.",
+    "Play my driving playlist."
+  ]
+},
+{
+  "description": "Pause/resume music.",
+  "prompts": [
+    "Pause the music.",
+    "Resume playback.",
+    "Can you pause the song?",
+    "Start the music again.",
+    "Hold the music."
+  ]
+},
+{
+  "description": "Skip to the next track.",
+  "prompts": [
+    "Next song.",
+    "Skip this one.",
+    "I don't like this song, skip it."
+  ]
+},
+{
+  "description": "Skip to the previous track.",
+  "prompts": [
+    "Previous track.",
+    "Go back to the last song."
+  ]
+},
+{
+  "description": "Adjust audio source. Parameter: Source of music.",
+  "prompts": [
+    "Switch to Bluetooth audio.",
+    "Can you play from my phone?",
+    "Change the source to radio.",
+    "Connect to my CarPlay.",
+    "I want to listen to music from my USB drive."
+  ]
+},
+{
+  "description": "Read out messages.",
+  "prompts": [
+    "Read my latest messages.",
+    "Do I have any new messages from Sarah?",
+    "Are there any messages from work?",
+    "Check for new texts.",
+    "Read out any messages from my wife."
+  ]
+},
+{
+  "description": "Send a text message. Parameter: Message text, recipient.",
+  "prompts": [
+    "Send a text to John saying 'I'm on my way.'",
+    "Message Sarah and ask her to pick up some milk.",
+    "Text my wife 'Be home soon.'",
+    "Send a message to 555-123-4567.",
+    "Can you text John back 'Sounds good'?"
+  ]
+},
+{
+  "description": "Get directions. Parameter: Destination.",
+  "prompts": [
+    "Get me directions to the nearest gas station using CarPlay.",
+    "Navigate to the airport with CarPlay.",
+    "Use CarPlay to find the fastest route home.",
+    "Can you show me how to get to the grocery store on my phone's map?",
+    "Get directions to the restaurant using my iPhone."
+  ]
+},
+{
+  "description": "Open app. Parameter: App name.",
+  "prompts": [
+    "Switch to Waze.",
+    "Open Spotify on CarPlay.",
+    "Go to the Podcasts app.",
+    "Can you switch to Google Maps?",
+    "Open Audible on CarPlay."
+  ]
+},
+{
+  "description": "Check traffic conditions. Parameter: Route.",
+  "prompts": [
+    "How's the traffic on the way home?",
+    "Check the traffic conditions on my usual route to work.",
+    "Is there any traffic on the highway?",
+    "Can you show me the traffic situation on CarPlay?",
+    "Give me a traffic update."
+  ]
+},
+{
+  "description": "Set a reminder. Parameter: Reminder content.",
+  "prompts": [
+    "Remind me to call John when I get home.",
+    "Set a reminder to pick up groceries.",
+    "Can you remind me about the meeting tomorrow?",
+    "Create a reminder for Sarah's birthday.",
+    "Set a reminder to fill up the gas tank."
+  ]
+},
+{
+  "description": "Check the weather. Parameter: Location, time.",
+  "prompts": [
+    "What's the weather like today?",
+    "Check the weather forecast for tomorrow.",
+    "How's the weather in New York?",
+    "Will it rain today?",
+    "Can you show me the weather radar?"
+  ]
+}
+]

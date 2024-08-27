@@ -1,0 +1,495 @@
+[
+{
+    "description": "Play song. Parameter: Search query",
+    "prompts": [
+      "Play the song 'Shape of You' by Ed Sheeran.",
+      "Can you start playing 'Blinding Lights'?",
+      "Play the track 'Bohemian Rhapsody' now.",
+      "I want to listen to 'Rolling in the Deep'.",
+      "Put on 'Uptown Funk' by Bruno Mars."
+    ]
+  },
+  {
+    "description": "Pause song.",
+    "prompts": [
+      "Pause the music.",
+      "Can you stop the song for a moment?",
+      "Pause the current track.",
+      "Hold the music for now.",
+      "Stop playing the song."
+    ]
+  },
+  {
+    "description": "Skip to next song.",
+    "prompts": [
+      "Skip this track.", // "Pause song."
+      "Next song, please.",
+      "Can you move to the next song?",
+      "Skip to the next track.",
+      "Go to the next song."
+    ]
+  }, // persists word "next"
+  {
+    "description": "Go to previous song.",
+    "prompts": [
+      "Play the previous song.", // "Play song."
+      "Go back to the last track.",
+      "Can you rewind to the previous song?",
+      "Play the last song again.", // "Play song."
+      "Return to the previous track." // "Play song."
+    ]
+  }, // persists word "play"
+  {
+    "description": "Shuffle playlist.",
+    "prompts": [
+      "Shuffle my playlist.",
+      "Can you mix up the songs in my playlist?",
+      "Turn on shuffle mode.",
+      "Play my playlist in random order.",
+      "Shuffle the current playlist."
+    ]
+  },
+  {
+    "description": "Repeat song.",
+    "prompts": [
+      "Repeat this song.",
+      "Can you loop this track?", // "Play song."
+      "Play the song on repeat.", 
+      "Repeat the current track.",
+      "Put this song on repeat."
+    ]
+  }, // persists word "repeat"
+  {
+    "description": "Add song to playlist. Parameter: Song, Playlist.",
+    "prompts": [
+      "Add this song to my 'Favorites' playlist.",
+      "Can you add 'Halo' to my workout playlist?",
+      "Put 'Happy' by Pharrell Williams in my party playlist.",
+      "Add 'Imagine' to my chill playlist.",
+      "Include 'Thriller' in my Halloween playlist." // "Search for songs."
+    ]
+  }, // ???
+  {
+    "description": "Remove song from playlist. Parameter: Song, Playlist.",
+    "prompts": [
+      "Remove this song from my 'Favorites' playlist.",
+      "Can you delete 'Halo' from my workout playlist?",
+      "Take 'Happy' by Pharrell Williams out of my party playlist.",
+      "Remove 'Imagine' from my chill playlist.",
+      "Delete 'Thriller' from my Halloween playlist."
+    ]
+  },
+  {
+    "description": "Like song.",
+    "prompts": [
+      "Like this song.", // "Play song."
+      "Can you give this track a thumbs up?", // "Play song."
+      "Mark this song as liked.", // "Play song."
+      "I want to like this track.", // "Play song."
+      "Add this song to my likes." // "Add song to playlist."
+    ]
+  }, // doesn't know what "like" means
+  {
+    "description": "Dislike song.",
+    "prompts": [
+      "Dislike this song.", // "Remove song from playlist."
+      "Can you give this track a thumbs down?", // "Play song." – too vague request
+      "Mark this song as disliked.", 
+      "I want to dislike this track.",
+      "Add this song to my dislikes."
+    ]
+  }, // doesn't know what "dislike" means
+  {
+    "description": "Add song to library. Parameter: Song.",
+    "prompts": [
+      "Add this song to my library.",
+      "Can you save this track to my collection?", // "Add song to playlist."
+      "Include this song in my library.",
+      "Save this track to my songs.", // "Add song to playlist."
+      "Add this song to my personal collection."  // "Add song to playlist."
+    ]
+  }, // playlist and library are very close
+  {
+    "description": "Remove song from library. Parameter: Song.",
+    "prompts": [
+      "Remove this song from my library.",
+      "Can you delete this track from my collection?",
+      "Exclude this song from my library.",
+      "Take this track out of my songs.", // "Remove song from playlist."
+      "Remove this song from my personal collection."
+    ]
+  }, // playlist and library are very close
+  {
+    "description": "Create playlist. Parameter: Playlist name.",
+    "prompts": [
+      "Create a new playlist called 'Road Trip'.",
+      "Can you make a playlist named 'Chill Vibes'?",
+      "Set up a playlist with the name 'Workout Tunes'.",
+      "Start a playlist titled 'Party Mix'.",
+      "Create a playlist named 'Study Jams'."
+    ]
+  },
+  {
+    "description": "Delete playlist. Parameter: Playlist name.",
+    "prompts": [
+      "Delete my 'Road Trip' playlist.",
+      "Can you remove the 'Chill Vibes' playlist?",
+      "Erase the 'Workout Tunes' playlist.",
+      "Get rid of the 'Party Mix' playlist.",
+      "Delete the 'Study Jams' playlist."
+    ]
+  },
+  {
+    "description": "Share song. Parameter: Contact.",
+    "prompts": [
+      "Share this song with John.",
+      "Can you send this track to Emily?",
+      "Share the song with my friend Alex.",
+      "Send this track to Sarah.",
+      "Share this song with my family group."
+    ]
+  },
+  {
+    "description": "View song lyrics.",
+    "prompts": [
+      "Show me the lyrics to this song.", // Search for songs.
+      "Can you display the lyrics for this track?", // Play song.
+      "I want to see the song lyrics.", 
+      "Bring up the lyrics for this song.", // Search for songs.
+      "View the lyrics of this track."
+    ]
+  }, // very odd, description should be more descriptive.
+  {
+    "description": "View song details.",
+    "prompts": [
+      "Show me the details of this song.", // Play song.
+      "Can you display the information for this track?", // Play song.
+      "I want to see the song details.",
+      "Bring up the details for this song.", // Search for songs.
+      "View the information of this track."
+    ]
+  },// Bring up = Search; again, more descriptive
+  {
+    "description": "View artist details.",
+    "prompts": [
+      "Show me the details of this artist.", // Search for artists.
+      "Can you display the information about this artist?", // Search for artists.
+
+      "I want to see the artist details.",
+      "Bring up the details for this musician.", // Search for artists.
+
+      "View the information of this artist." // Search for artists.
+    ]
+  },
+  {
+    "description": "View album details.",
+    "prompts": [
+      "Show me the details of this album.", // Search for albums.
+      "Can you display the information about this album?", // Search for albums.
+      "I want to see the album details.",
+      "Bring up the details for this record.",
+      "View the information of this album."
+    ]
+  },
+  {
+    "description": "View playlist details.",
+    "prompts": [
+      "Show me the details of this playlist.",
+      "Can you display the information about this playlist?",
+      "I want to see the playlist details.",
+      "Bring up the details for this playlist.",
+      "View the information of this playlist."
+    ]
+  },
+  {
+    "description": "View recently played songs.",
+    "prompts": [
+      "Show me my recently played songs.",
+      "Can you display the tracks I listened to recently?",
+      "I want to see my recent songs.",
+      "Bring up the songs I've played lately.",
+      "View my recently played tracks."
+    ]
+  },
+  {
+    "description": "View top charts.",
+    "prompts": [
+      "Show me the top charts.",
+      "Can you display the current top songs?",
+      "I want to see the top charting tracks.",
+      "Bring up the latest top charts.",
+      "View the top songs right now."
+    ]
+  },
+  {
+    "description": "Search for songs. Parameter: Search query.",
+    "prompts": [
+   "Search for the song 'Hallelujah'.",
+      "Can you find the track 'Let it Be'?",
+      "Look up 'Billie Jean'.",
+      "Find the song 'Wonderwall'.",
+      "Search for 'Hotel California'."
+    ]
+  },
+  {
+    "description": "Search for artists. Parameter: Search query.",
+    "prompts": [
+      "Search for the artist 'Adele'.",
+      "Can you find the artist 'The Beatles'?",
+      "Look up 'Taylor Swift'.",
+      "Find the artist 'Drake'.",
+      "Search for 'Beyoncé'."
+    ]
+  },
+  {
+    "description": "Search for albums. Parameter: Search query.",
+    "prompts": [
+      "Search for the album 'Thriller'.",
+      "Can you find the album 'Abbey Road'?",
+      "Look up 'Lemonade'.",
+      "Find the album '25'.",
+      "Search for 'The Dark Side of the Moon'."
+    ]
+  },
+  {
+    "description": "Search for playlists. Parameter: Search query.",
+    "prompts": [
+      "Search for the playlist 'Top Hits 2024'.",
+      "Can you find the playlist 'Chill Vibes'?",
+      "Look up 'Workout Mix'.",
+      "Find the playlist 'Road Trip'.",
+      "Search for 'Party Anthems'."
+    ]
+  },
+  {
+    "description": "Filter songs by genre. Parameter: Genre.",
+    "prompts": [
+      "Show me songs in the rock genre.",
+      "Can you filter tracks by pop?",
+      "I want to see jazz songs.",
+      "Bring up music in the hip-hop genre.",
+      "View songs that are classical."
+    ]
+  },
+  {
+    "description": "Filter songs by language. Parameter: Language.",
+    "prompts": [
+      "Show me songs in English.",
+      "Can you filter tracks by Spanish?",
+      "I want to see French songs.",
+      "Bring up music in Korean.",
+      "View songs that are Italian."
+    ]
+  },
+  {
+    "description": "Filter songs by artist. Parameter: Artist.",
+    "prompts": [
+      "Show me songs by Ed Sheeran.",
+      "Can you filter tracks by Taylor Swift?",
+      "I want to see music by Drake.",
+      "Bring up songs by The Beatles.",
+      "View tracks that are by Adele."
+    ]
+  },
+  {
+    "description": "Add song to queue. Parameter: Song name.",
+    "prompts": [
+      "Add this song next in the queue.",
+      "Can you put this track at the top of my queue?",
+      "Queue this song after the current track.",
+      "Add this music to play later.",
+      "Insert this song at the end of the queue."
+    ]
+  },
+  {
+    "description": "Remove song from queue. Parameter: Song name.",
+    "prompts": [
+      "Remove the next song from the queue.",
+      "Can you take the third track out of the queue?",
+      "Delete this song from my queue.",
+      "Remove the last track in the queue.",
+      "Clear this song from my upcoming list."
+    ]
+  },
+---------------------
+  {
+    "description": "Clear queue.",
+    "prompts": [
+      "Clear the music queue.",
+      "Can you empty my queue?",
+      "I want to clear my upcoming songs.", // Delete playlist.
+      "Reset the song queue.",
+      "Remove all tracks from the queue."
+    ]
+  },
+  {
+    "description": "Set playback quality. Parameter: Playback quality.",
+    "prompts": [
+      "Set the playback quality to high.",
+      "Can you change the quality to low?", // Set streaming quality.
+      "Set the music quality to medium.", // Set streaming quality.
+      "Adjust playback to highest quality.",
+      "Set the song quality to standard." // Set streaming quality.
+    ]
+  },
+  {
+    "description": "Download song.",
+    "prompts": [
+      "Download this song in high quality.",
+      "Can you download the track in low quality?",
+      "Save the song with medium quality.",
+      "Download this music in best quality.", // Search for songs.
+      "Save the song with standard quality."
+    ]
+  },
+  {
+    "description": "Download album.",
+    "prompts": [
+      "Download this album in high quality.",
+      "Can you save the album in low quality?", // Set playback quality.
+      "Download the album with medium quality.",
+      "Save this record in best quality.", // Set playback quality.
+      "Download the album with standard quality."
+    ]
+  },
+  {
+    "description": "Download entire library.",
+    "prompts": [
+      "Download my entire library in high quality.", 
+      "Can you save all my songs in low quality?", // Set streaming quality.
+      "Download my full collection with medium quality.", // Download album.
+      "Save my library in best quality.",
+      "Download all my music with standard quality." // Search for songs.
+    ]
+  },
+  {
+    "description": "Enable offline mode.",
+    "prompts": [
+      "Enable offline mode.",
+      "Can you switch to offline mode?",
+      "Turn on offline mode.",
+      "Set the app to offline mode.",
+      "Go to offline mode."
+    ]
+  },
+  {
+    "description": "Disable offline mode.",
+    "prompts": [
+      "Disable offline mode.",
+      "Can you switch to online mode?",
+      "Turn off offline mode.",
+      "Set the app to online mode.",
+      "Go to online mode."
+    ]
+  },
+  {
+    "description": "Set streaming quality. Parameter: Quality selection.",
+    "prompts": [
+      "Set the streaming quality to high.",
+      "Can you change the streaming to low quality?",
+      "Adjust the stream to medium quality.",
+      "Set the streaming music to best quality.",
+      "Stream songs in standard quality."
+    ]
+  },
+  {
+    "description": "Set sleep timer. Parameter: Timer duration.",
+    "prompts": [
+      "Set a sleep timer for 30 minutes.",
+      "Can you put a sleep timer for an hour?",
+      "I want to set a timer for 45 minutes.",
+      "Schedule a sleep timer for 20 minutes.",
+      "Set a timer to stop playback in 15 minutes."
+    ]
+  },
+  {
+    "description": "Enable crossfade. Parameter: Crossfade duration.",
+    "prompts": [
+      "Enable crossfade with a duration of 5 seconds.", // Set crossfade duration.
+      "Can you turn on crossfade for 3 seconds?", // Set crossfade duration.
+      "I want to enable crossfade for 8 seconds.", // Set crossfade duration.
+      "Turn on crossfade with a duration of 10 seconds.", // // Set crossfade duration.
+      "Enable crossfade with a 7-second transition." // Set crossfade duration.
+    ]
+  },
+  {
+    "description": "Disable crossfade.",
+    "prompts": [
+      "Disable crossfade.",
+      "Can you turn off crossfade?",
+      "I want to disable crossfade.",
+      "Turn off crossfade.",
+      "Disable the crossfade feature."
+    ]
+  },
+  {
+    "description": "Set crossfade duration. Parameter: Crossfade duration.",
+    "prompts": [
+      "Set the crossfade duration to 6 seconds.",
+      "Can you adjust the crossfade to 4 seconds?",
+      "I want to change the crossfade duration to 9 seconds.",
+      "Set the transition time to 8 seconds for crossfade.",
+      "Adjust the crossfade to 5 seconds."
+    ]
+  },
+  {
+    "description": "Clear playback history.",
+    "prompts": [
+      "Clear my playback history.",
+      "Can you delete my listening history?",
+      "I want to erase my playback history.",
+      "Remove my played tracks from history.",
+      "Clear all my listening activities." // Play song.
+    ]
+  },
+  {
+    "description": "Enable explicit content filter.",
+    "prompts": [
+      "Enable explicit content filter.",
+      "Can you turn on the explicit content filter?",
+      "I want to filter out explicit songs.", // Search for songs.
+      "Turn on the filter for explicit content.",
+      "Enable filtering of explicit material."
+    ]
+  },
+  {
+    "description": "Disable explicit content filter.",
+    "prompts": [
+      "Disable explicit content filter.",
+      "Can you turn off the explicit content filter?",
+      "I want to remove the filter for explicit songs.",
+      "Turn off the filter for explicit content.",
+      "Disable filtering of explicit material."
+    ]
+  },
+  {
+    "description": "View account.",
+    "prompts": [
+      "Show me my account details.",
+      "Can you display my account information?",
+      "I want to see my account details.",
+      "Bring up my profile information.",
+      "View my account settings."
+    ]
+  },
+  {
+    "description": "View storage usage.",
+    "prompts": [
+      "Show me my storage usage.",
+      "Can you display my storage data?",
+      "I want to see how much storage I've used.",
+      "Bring up my storage usage.",
+      "View my storage statistics."
+    ]
+  },
+  {
+    "description": "View data usage.",
+    "prompts": [
+      "Show me my data usage.",
+      "Can you display my data consumption?",
+      "I want to see how much data I've used.",
+      "Bring up my data usage.",
+      "View my data statistics."
+    ]
+  }
+]

@@ -104,7 +104,7 @@ def get_top_similar(probabilities, similarity_threshold):
 def right_tokenwise_relationship_classification(model, prompt, relationship_phrase, tokenizer, list_path):
     descriptions = extract_descriptions(list_path)
 
-    augmented_prompt = "A user asks to " + prompt + " " + relationship_phrase + " "
+    augmented_prompt = "You are the AI assistant that controlls the phone app. Continue the following sentence by outputing the most logically probable action to do after the given request. A user asks to " + prompt + " " + relationship_phrase + " "
     tokenized_prompt = tokenizer.encode(augmented_prompt)
 
     tokenized_descriptions = tokenize_api_descriptions(descriptions, tokenizer)

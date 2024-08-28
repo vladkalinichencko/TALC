@@ -115,14 +115,42 @@ def right_tokenwise_relationship_classification(model, prompt, relationship_phra
 
     prob_threshold = 0
     
-    # Prepare for visualization
-    plt.figure(figsize=(15, 10))
-    
-    for position in range(find_longest_tokenized_description(tokenized_descriptions)):
-        position_logits = []
+    def create_combined_logit_plots(raw_logits, softmaxed_logits, log_softmaxed_logits, position, description_index):
+        fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(20, 6))
+        fig.suptitle(f'Logit Distributions (Position {position}, Description {description_index})')
         
-        for index in range(len(tokenized_descriptions)):
-            description = tokenized_descriptions[index]
+        def plot_logits(ax, logits, title, color):
+            x = range(len(logits))
+            
+            # std_dev = np.std(logits)
+            # se = std_dev / np.sqrt(len(logits))
+            
+            # ax.bar(x, logits,color=color, yerr=se, capsize=1)
+            ax.bar(x, logits,color=color)
+            ax.set_title(title)
+            ax.set_xlabel('Logit Index')
+            ax.set_ylabel('Logit Value')
+            ax.set_ylim(min(logits) - 1, max(logits) + 1)
+            error_approx = round(np.std(logits) / np.sqrt(len(logits)), 1)
+            ax.text(0.7, 0.9, f'Error Approx: {error_approx}', transform=ax.transAxes)
+
+        plot_logits(ax1, raw_logits, 'Raw Logits', 'blue')
+        plot_logits(ax2, softmaxed_logits, 'Softmaxed Logits', 'green')
+        plot_logits(ax3, log_softmaxed_logits, 'Log Softmaxed Logits', 'red')
+
+        plt.tight_layout()
+        plt.show()
+
+    for position in range(find_longest_tokenized_description(tokenized_descriptions)):
+        raw_logits = []
+        softmaxed_logits = []
+        log_softmaxed_logits = []
+        
+        position_raw_logits = []
+        position_softmaxed_logits = []
+        position_log_softmaxed_logits = []
+        
+        for index, description in enumerate(tokenized_descriptions):
             tokenized_api_prompt = tokenized_prompt.copy() + description
             logits = model(mx.array(tokenized_api_prompt)[None])[0]
 
@@ -130,35 +158,36 @@ def right_tokenwise_relationship_classification(model, prompt, relationship_phra
 
             token_logits = logits[(-len(description) + position):]
             token_logits = token_logits[0]
-            token_logits = mx.softmax(token_logits)
+            
+            # raw
+            raw_logits = token_logits.tolist()
+            
+            raw_logit = raw_logits[token]
+            position_raw_logits.append(raw_logit)
+            
+            # softmax
+            softmaxed_logits = mx.softmax(token_logits).tolist()
+            
+            softmaxed_logit = softmaxed_logits[token]
+            position_softmaxed_logits.append(softmaxed_logit)
+            
+            # log
+            log_softmaxed_logits = mx.log(mx.array(softmaxed_logits)).tolist()
+            
+            log_softmaxed_logit = log_softmaxed_logits[token]
+            position_log_softmaxed_logits.append(log_softmaxed_logit)
 
-            token_logits = mx.log(token_logits)
-            logit = token_logits[token].item()
-            position_logits.append(logit)
+            # Create combined logit distribution plots
+            create_combined_logit_plots(raw_logits, softmaxed_logits, log_softmaxed_logits, position, index)
 
             prev_prob = logits_for_position[index][1]
-            new_prob = (prev_prob + logit) / (position + 1)
+            new_prob = (prev_prob + log_softmaxed_logit) / (position + 1)
             b = logits_for_position[index][2]
 
             logits_for_position[index] = (tokenizer.decode(description), new_prob, b)
 
-        # Visualize probability distribution for this position
-        plt.subplot(3, 2, (position % 6) + 1)
-        sns.histplot(position_logits, kde=True)
-        plt.title(f'Probability Distribution at Position {position}')
-        plt.xlabel('Log Probability')
-        plt.ylabel('Frequency')
-        
-        # Error approximation
-        error_approx = np.std(position_logits) / np.sqrt(len(position_logits))
-        error_approx = round(error_approx, 1)  # Round to 0.1 fraction
-        plt.text(0.7, 0.9, f'Error Approx: {error_approx}', transform=plt.gca().transAxes)
-
-        if position % 6 == 5 or position == len(tokenized_descriptions) - 1:
-            plt.tight_layout()
-            plt.show()
-            if position < len(tokenized_descriptions) - 1:
-                plt.figure(figsize=(15, 10))
+        # Create histogram for each position
+        create_combined_logit_plots(position_raw_logits, position_softmaxed_logits, position_log_softmaxed_logits, position, "")
 
         filtered_logits = [x for x in logits_for_position if x[2]]
         sorted_filtered_logits = sorted(filtered_logits, key=lambda x: x[1], reverse=True)
@@ -187,7 +216,7 @@ def right_tokenwise_relationship_classification(model, prompt, relationship_phra
     # Final visualization: comparing top candidates
     top_candidates = sorted_filtered_logits[:5]  # Adjust number as needed
     plt.figure(figsize=(10, 6))
-    sns.barplot(x=[c[0] for c in top_candidates], y=[c[1] for c in top_candidates])
+    plt.bar([c[0] for c in top_candidates], [c[1] for c in top_candidates])
     plt.title('Top Candidates Comparison')
     plt.xlabel('Description')
     plt.ylabel('Final Probability')

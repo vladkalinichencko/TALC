@@ -12,3 +12,4 @@ repo_name = "mistralai/Mistral-7B-v0.3"
 model, tokenizer = load(repo_name)
 
 print(evaluate_talc(model, "Therefore, you have to", tokenizer, "tools/music_app_new.json"))
+

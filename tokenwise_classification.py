@@ -121,31 +121,50 @@ def right_tokenwise_relationship_classification(model, prompt, relationship_phra
         
         def plot_logits(ax, logits, title, color):
             x = range(len(logits))
+            ax.plot(x, logits, color=color)
+            ax.set_title(title)
+            ax.set_xlabel('Logit Index')
+            ax.set_ylabel('Logit Value')
+            ax.set_ylim(min(logits), max(logits))
+            # ax.set_yscale('log')
+            error_approx = round(np.std(logits) / np.sqrt(len(logits)), 1)
+            ax.text(0.7, 0.9, f'Error Approx: {error_approx}', transform=ax.transAxes)
+
+        plot_logits(ax1, raw_logits, 'Raw Logits', '#7DF9FF')
+        plot_logits(ax2, softmaxed_logits, 'Softmaxed Logits', '#FFB6C1')
+        plot_logits(ax3, log_softmaxed_logits, 'Log Softmaxed Logits', '#696969')
+
+        plt.tight_layout()
+        plt.show()
+    
+    def create_combined_logit_bars(raw_logits, softmaxed_logits, log_softmaxed_logits, position, description_index):
+        fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(20, 6))
+        fig.suptitle(f'Logit Distributions (Position {position}, Description {description_index})')
+        
+        def plot_logits(ax, logits, title, color):
+            x = range(len(logits))
             
             # std_dev = np.std(logits)
             # se = std_dev / np.sqrt(len(logits))
             
             # ax.bar(x, logits,color=color, yerr=se, capsize=1)
-            ax.bar(x, logits,color=color)
+            ax.bar(x, logits, color=color)
             ax.set_title(title)
             ax.set_xlabel('Logit Index')
             ax.set_ylabel('Logit Value')
-            ax.set_ylim(min(logits) - 1, max(logits) + 1)
+            ax.set_ylim(min(logits) - 0.1, max(logits) + 0.1)
+            # ax.set_yscale('log')
             error_approx = round(np.std(logits) / np.sqrt(len(logits)), 1)
             ax.text(0.7, 0.9, f'Error Approx: {error_approx}', transform=ax.transAxes)
 
-        plot_logits(ax1, raw_logits, 'Raw Logits', 'blue')
-        plot_logits(ax2, softmaxed_logits, 'Softmaxed Logits', 'green')
-        plot_logits(ax3, log_softmaxed_logits, 'Log Softmaxed Logits', 'red')
+        plot_logits(ax1, raw_logits, 'Raw Logits', '#7DF9FF')
+        plot_logits(ax2, softmaxed_logits, 'Softmaxed Logits', '#FFB6C1')
+        plot_logits(ax3, log_softmaxed_logits, 'Log Softmaxed Logits', '#696969')
 
         plt.tight_layout()
         plt.show()
 
     for position in range(find_longest_tokenized_description(tokenized_descriptions)):
-        raw_logits = []
-        softmaxed_logits = []
-        log_softmaxed_logits = []
-        
         position_raw_logits = []
         position_softmaxed_logits = []
         position_log_softmaxed_logits = []
@@ -187,7 +206,7 @@ def right_tokenwise_relationship_classification(model, prompt, relationship_phra
             logits_for_position[index] = (tokenizer.decode(description), new_prob, b)
 
         # Create histogram for each position
-        create_combined_logit_plots(position_raw_logits, position_softmaxed_logits, position_log_softmaxed_logits, position, "")
+        create_combined_logit_bars(position_raw_logits, position_softmaxed_logits, position_log_softmaxed_logits, position, "")
 
         filtered_logits = [x for x in logits_for_position if x[2]]
         sorted_filtered_logits = sorted(filtered_logits, key=lambda x: x[1], reverse=True)
